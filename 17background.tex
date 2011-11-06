@@ -1,0 +1,88 @@
+\section{Background\label{background}}
+
+\parskip -8pt
+This section introduces the background of the study: description of software requirements prioritization methods; examples of CV result analysis methods; and description of compositional data analysis and CV.
+\parskip 0pt
+
+\subsection{Prioritization Methods}
+
+\parskip -8pt
+Some of the most popular prioritization methods are the analytical hierarchy
+process (AHP), cumulative voting (CV), ranking, numerical assignment,
+top-ten, the planning game, minimal spanning tree, bubble sort, binary
+search tree \citep{Berander2005,Karlsson1998}. Ranking and numerical
+assignment methods perform prioritization on an ordinal scale. AHP and CV
+are harder to use and considered more time consuming compared to other methods but, 
+on the other hand, produce priorities in ratio scale.
+\parskip 0pt
+
+Prioritization can be used not just to decide which factors to address,
+but also to determine the order in which they need to be handled. In market
+driven software development a small part of a very large number of requirements
+needs to be selected and divided into several releases to maximize return
+on investment. In bespoke requirements, focusing on early delivery
+of value can help reduce the risk of project cancellation.
+
+Ratio scale priorities have several advantages over ordinal scale
+priorities. Ratio scale shows not just the order of items but also
+relative distance between them. This enables the priority of a group of
+items to be calculated by summing up the priorities of individual items
+\citep{Berander2006a}. It is possible to say that one item or set
+of items has higher priority than another set of items. Supposing stakeholders
+have to choose between several lower priority items and one item with
+higher priority; with ordinal scale, the item with highest priority will
+always be selected first. However, if priorities are given on a ratio
+scale, it is possible that lower priority items will be selected if
+their cumulative priority is higher. Knowing the relative importance of
+sets of prioritization items helps in software release planning. Ratio
+scale allows the combining of multiple priority factors by calculating ratios
+between them. One example of this is the cost-value ratio that shows which
+requirements give more value for less money \citep{Karlsson1997}.
+
+\subsection{Prioritization Result Analysis}
+
+Different studies use and analyze CV in different ways. Disagreement
+between stakeholders happens when two or more stakeholders have assigned
+a different priority to one prioritization item. If the level of disagreement
+is high it may indicate potential conflicts between stakeholders.
+Such conflicts may be of technical character, as well as social or cultural.
+
+The satisfaction of a stakeholder with the final prioritization results is
+determined by the difference between the results and the individual priorities
+of the stakeholder. A smaller level of difference leads to higher satisfaction.
+In the end, stakeholder satisfaction is important because it is necessary to achieve
+stakeholder commitment.
+
+A part of stakeholders may form a group of some kind and, therefore, prioritize
+requirements similarly. Such groups may be formed by users, software
+developers, managers and many other stakeholders. It may be useful
+to detect whether a group of stakeholders has different preferences
+than all other stakeholders. In \citep{Pettersson2008} domain experts,
+technical experts, managers, project managers, testers, and developers
+use CV to prioritize software process improvement issues. CV results
+are analyzed using disagreement charts and satisfaction charts.
+Principal component analysis (PCA) is used to identify distinct
+groups of stakeholders.
+
+The same items can be prioritized by the same stakeholders multiple times
+from different perspectives. It is useful to determine correlation between
+the priorities in different perspectives to assess the differences
+between the perspectives. In \citep{Barney2009b} CV is used by developers,
+testers, and managers to prioritize quality attributes. The same quality
+attributes are prioritized from two perspectives: the perceived situation
+today and the perceived ideal situation. Correlation between the two perspectives
+is evaluated using the Spearman rank correlation matrix. This allows an analysis of
+how well the company balances the priorities of software quality attributes.
+
+In \citep{Jonsson2005} change impact issues are prioritized by developers,
+testers, managers, and system architects. The prioritization is done
+with respect to three perspectives: strategic, tactical, and operative.
+In order to determine correlation between the perspectives, CV results are
+analyzed using the Kruskal-Wallis test. In \citep{Chatzipetrou2010} the
+results of \citep{Jonsson2005} are analyzed using PCA, biplot, and
+ternary plot. PCA is used to find correlated issues.
+%If issues are correlated it can be said that the difference between their priorities is not statistically significant. Thus, issue priorities can be considered equal.
+Biplot shows variance, correlation, and difference between
+the priorities of issues, and shows the viewpoints of stakeholders. Ternary
+plot is used to show the relative number of issues that received high,
+medium, and low priority.

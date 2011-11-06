@@ -1,0 +1,275 @@
+
+
+\subsection{Cumulative Voting\label{app:CV}}
+
+CV is a prioritization method for prioritizing a list of items \citep{Leffingwell1999}.
+CV has many synonyms in literature: hundred dollar method, hundred
+dollar test, hundred point method, 100\$ dollar method, 100\$ dollar
+test, 100\$ point method.
+Before being applied in software engineering CV was used for
+political elections \citep{Engstrom1999} and corporate governance
+\citep{Bhagat1984}. CV is also applied in decision making in forestry
+\citep{Hiltunen2008}, voting in social networks \citep{Boldi:2009:VSN:1645953.1646052} and in computer algorithms for consensus clustering \citep{Ayad2008b} e.g.\ clustering is the assignment of objects to groups and it is used in pattern recognition, data mining, and machine learning. Consensus clustering is a method for combining the results of different clustering algorithms.
+
+In CV a stakeholder is given 100 points,
+imaginary dollars or units of percentages that can be spent on the prioritization
+items. The stakeholder can spend any amount of points on any number
+of items as long as the total amount adds up to 100. The more points
+assigned to an item, the higher the priority of the item. The
+stakeholder may spend all the points on just one item or distribute
+them among all or some of the items.
+
+Often prioritization is done by more than one stakeholder. The final
+priority of an item can be calculated by adding up the points each stakeholder
+has spent on it. Sometimes the vote of some stakeholders may be more
+important than the votes of others. For example, a manager may be
+more influential than an employee or shareholders may have different
+amount of shares. In such a case the priorities of each stakeholder
+may be multiplied by an individual coefficient or a different amount of 
+points for prioritization.
+
+It is advisable to randomize the order of items in a prioritization
+list. This is necessary to minimize the effect of order on the prioritization
+results \citep{Svahnberg2009}.
+
+\subsubsection{Benefits and drawbacks of Cumulative Voting}
+Compared to AHP, CV is faster and easier to learn and use \citep{Berander2005,Ahl2005}.
+AHP benefits from consistency check, but CV does not require this because
+all prioritization items are evaluated simultaneously \citep{Ahl2005}.
+
+There are a few problems with CV. First of all, it cannot be repeated for the
+same stakeholders and prioritization items due to stakeholder bias
+\citep{Leffingwell1999} (c.f.\ Section~\ref{hcv}). Secondly, CV becomes more difficult if the number of prioritization items increases \citep{Berander2009a}.
+
+\subsubsection{Example of Cumulative Voting by Several Stakeholders}
+
+Let us give an example of CV with several stakeholders. Suppose Robin,
+Alice, and John are three friends who want to buy some beverages in
+a store. They have different preferences but do not want to buy too
+many drinks. Therefore, they decide to use CV to decide what to buy.
+Each of the friends distributes 100 points between four items: milk,
+tea, coffee, and juice (Step 1 in Figure~\ref{fig:Example-of-Cumulative}).
+Each of them will spend a different amount of money on the purchase,
+hence, their priorities are multiplied by different coefficients
+(Step 2 and the stakeholder importance coefficient in Figure~\ref{fig:Example-of-Cumulative}).
+The final beverage priorities are calculated by summing up the weighted priorities
+of stakeholders (Step 3 in Figure~\ref{fig:Example-of-Cumulative}).
+
+%random
+
+%
+\begin{figure}
+\includegraphics[scale=0.55]{fig/cv}
+
+\caption{\label{fig:Example-of-Cumulative}Example of Cumulative Voting Performed
+by Several Stakeholders}
+%
+\end{figure}
+
+\subsubsection{Stakeholder Bias\label{sub:Stakeholder-Bias}}
+
+Prioritization using CV may be biased if a stakeholder knows the preferences
+of other stakeholders. He may manipulate the results by spending more
+points on items that are important to him but not the other stakeholders.
+On the one hand, stakeholder bias makes it unreasonable to repeat CV
+with the same prioritization items and stakeholders. On the other hand,
+this property of CV may be useful in giving more power to important
+minority stakeholders, such as security experts or software testers.
+Suppose the same software requirements are prioritized for a second time using
+CV. A developer knows that all vital functionality is selected by
+other stakeholders, but his toy feature is left out. The developer
+could spend all his points on this feature to put it in the next release. 
+
+Stakeholder bias may be mitigated by setting a maximum priority that
+can be assigned to an item. This way each stakeholder is forced to
+distribute the money between several prioritization items \citep{Berander2006a}.
+
+Another bias is that people in general tend to assign round priority
+values. This is caused by lack of objective judgement criteria. Either
+way it seems to be a minor problem because all prioritization is largely
+based on expert opinion.
+
+
+\subsubsection{Scalability of Cumulative Voting, Hierarchical Cumulative Voting\label{hcv}}
+
+Standard CV approach has a low scalability. If the number of prioritization items
+is high, stakeholders may lose sight of the bigger picture and assign priorities to a
+limited number of items. A partial solution to the problem is giving
+more points for prioritization (1,000 or 10,000 instead of 100).
+
+When the number of prioritization items is high they can usually 
+be grouped hierarchically by forming a tree structure (Figure~\ref{fig:Prionitization-Item-Hierarchy}) and, thus, parent-child dependencies will exist between many items.% For example, software
+%requirements or quality metrics may have different abstraction levels.
+%Software reliability may be detailed by maturity, fault tolerance,
+%and recoverability. Additionally, high level requirements for sending an e-mail
+%may be specified by lower level requirements: enter receiver address,
+%input message text, attach file, etc.
+
+%
+\begin{figure}
+\includegraphics[scale=0.45]{fig/hcv-example1}
+
+\caption{\label{fig:Prionitization-Item-Hierarchy}Prioritization Item Hierarchy
+Example}
+%
+\end{figure}
+
+
+In \citep{Berander2006a} the authors propose a method for prioritizing hierarchically
+structured items called Hierarchical Cumulative Voting (HCV). It may
+be seen as combination of the hierarchical part of the Analytical Hierarchy
+Process (AHP) \citep{Berander2005,Saaty1980a} and the CV prioritization method.
+Since items are prioritized in smaller sets, stakeholders do not lose
+sight of the bigger picture during prioritization, and the prioritization of a large number
+of requirements is considered easier.% Therefore, HCV helps in applying CV to a large
+%number of items.
+
+
+\subsubsection{Compensation Factor\label{sub:Compensation-factor}}
+
+HCV deals with the problem of prioritization scalability but it comes
+at a cost. Low level item groups may consist of different number of
+items, but the number of points spent on each group is the same, i.e.\ in
+a small-sized group, the same amount of points is distributed among fewer items.
+Hence, items in smaller groups are statistically more likely to have a higher priority on average
+than items in larger groups. To balance this difference each low
+level prioritization item can be multiplied by a compensation factor \citep{Berander2006a}.
+
+
+One example of compensation factors is the number of items in small-sized
+requirement groups as explained above. However, this compensation factor
+has a major drawback. In extreme cases it favours items in larger groups
+over items in smaller ones. For instance, suppose an item ($A$) in a
+group of 10 items is assigned 60 points. Hence, $A$ will receive 600
+compensated points. In this case it is impossible for any item in
+a group smaller than 6 items to compete with $A$. Even if item ($B$) in
+a group of 5 is assigned the maximum number of points (100), the maximum compensated
+priority value $B$ can receive is 500.
+
+In \citep{Berander2009a} the authors suggest that compensated prioritization is favourable
+over uncompensated. But neither compensated nor uncompensated prioritization
+is perfect and as a general rule it is better to keep the size of
+prioritization item groups similar.
+
+
+\subsubsection{HCV Execution}
+
+According to \citep{Berander2006a} HCV is conducted with the following
+steps (Steps 4 and 5 are optional):
+
+\begin{enumerate}
+\item Construct hierarchy. Prioritization items need to be divided into
+one high and several low level item groups. Each low level item group
+is child to exactly one high level item. And each high level item
+has one low level item group. One low level item may belong to several
+item groups. Even if part of the items are not logically connected they
+can be grouped separately and assigned a fake parent item, e.g.\ `misc.
+items'. HCV does not provide any directions on creating a requirements
+hierarchy.
+
+\item Each high and low level item group is prioritized separately using
+CV. The stakeholder may prioritize all item groups at once or one by one.
+But it should be possible to prioritize groups in any order and repeatedly,
+because the stakeholder might learn more about the items while performing the prioritization.
+
+In particular he is likely to learn more about a high level item when
+prioritizing its low level item group \citep{Brenner2009}. Some stakeholders
+may prioritize only part of the groups and each group may be prioritized
+by different stakeholders.
+
+\item Priority of each low level item is normalized by dividing it with
+the sum of all low level priorities of items in all groups:
+
+\begin{equation}
+p{}_{i\, normalized}=\frac{p_{i}}{\sum_{j=0}^{n}p_{j}}\label{eq:norm}
+\end{equation}
+
+\item The final priority of each low level item is calculated by multiplying
+it with the priority of its parent high level item.
+
+\item Apply the compensation factor to all low level requirements as described
+in Section~\ref{sub:Compensation-factor}.
+
+\item When multiple stakeholders have performed the prioritization, priorities
+of low level items are combined as in standard CV.
+\end{enumerate}
+
+It is possible that one low level item is child of more than one high
+level requirement and, thus, belongs to two or more low level requirement
+groups (see Figure~\ref{fig:Overlapping-Prioritization-Item}). Such
+requirements participate in the standard HCV prioritization process and
+are prioritized two or more times with each group they belong to.
+At the end of the prioritization they receive several priority values.
+These values must be summed together to form the final priority of the item.
+(This is done because the item adds value to both parts of hierarchy.)
+
+%The HCV procedure can be easily applied to hierarchies with more than
+%two levels.
+
+%
+\begin{figure}
+\includegraphics[scale=0.5]{\string"fig/hcv hierarchy\string".png}
+
+\caption{\label{fig:Overlapping-Prioritization-Item}Overlapping Prioritization
+Item Hierarchy Example}
+%
+\end{figure}
+
+
+
+\subsubsection{Example of Hierarchical Cumulative Voting}
+
+In this section we will give a short example of HCV. Suppose six requirements
+for a mobile phone operating system need to be prioritized: `reminder
+alarm', `specify repeated event', `hide contact', `add picture to phonebook',
+`search contact', `make video call'. Three high level requirements can
+be identified: `Calendar', `Phonebook', `Call'. The low level requirements are then
+grouped as sub-requirements of high level requirements as shown in
+Figure~\ref{fig:Example-of-Hierachical}. The `Search contact' requirement is a 
+sub-requirement and has two parent requirements--- `Phonebook'
+and `Call'. The computation of the final priorities of requirements is shown
+in Table~\ref{tab:Example-of-Hierarchical}.
+
+After requirements are grouped, and a hierarchy is defined, each group
+of requirements are then prioritized using CV. The final priority of a low level
+requirement is computed by multiplying the priority of the requirement
+with the priority of its parent high level requirement and the compensation
+factor. The compensation factor in this particular case is the number of elements
+in a group, two for the `calendar' and `call' sub-requirements and three for
+the `phonebook' sub-requirements.
+
+\begin{flushleft}
+%
+\begin{figure}
+\includegraphics[scale=0.5]{fig/hcv2}
+
+\caption{\label{fig:Example-of-Hierachical}Example of Hierarchical Cumulative
+Voting, Requirement Hierarchy}
+%
+\end{figure}
+
+\par\end{flushleft}
+
+\begin{table}[t]
+\caption{\label{tab:Example-of-Hierarchical}Example of Hierarchical Cumulative Voting}
+
+\begin{tabular}{
+|>{\raggedright}p{0.18\columnwidth}
+|>{\raggedright}p{0.15\columnwidth}
+|>{\raggedright}p{0.15\columnwidth}
+|>{\raggedleft}p{0.25\columnwidth}
+|>{\raggedright}p{0.1\columnwidth}
+|}
+\hline
+Phone requirements & Compensation factor & Sub-requirements & Priority calculation & Final priority\tabularnewline
+\hline\hline
+Calendar & 2 & Reminder alarm & 40{*}30{*}2 & 2400\tabularnewline \hline
+Calendar & 2 & Specify repeated event & 60{*}30{*}2 & 3600\tabularnewline  \hline
+Phonebook & 3 & Hide contact & 40{*}20{*}3 & 1600\tabularnewline \hline
+Phonebook & 3 & Add picture & 20{*}20{*}3 & 800\tabularnewline \hline
+Phonebook \& Call & 3 \& 2 & Search contact & 40{*}20{*}3 + 50{*}50{*}2 & 7400\tabularnewline \hline
+Call & 2 & Video call & 50 {*} 50 {*} 2 & 2500\tabularnewline
+\hline
+\end{tabular}
+\end{table}
+

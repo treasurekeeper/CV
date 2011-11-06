@@ -1,0 +1,51 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Background}{3}
+\contentsline {subsection}{\numberline {2.1}Prioritization Methods}{3}
+\contentsline {subsection}{\numberline {2.2}Prioritization Result Analysis}{3}
+\contentsline {subsection}{\numberline {2.3}Cumulative Voting}{4}
+\contentsline {subsubsection}{\numberline {2.3.1}Benefits and drawbacks of Cumulative Voting}{5}
+\contentsline {subsubsection}{\numberline {2.3.2}Example of Cumulative Voting by Several Stakeholders}{5}
+\contentsline {subsubsection}{\numberline {2.3.3}Stakeholder Bias}{6}
+\contentsline {subsubsection}{\numberline {2.3.4}Scalability of Cumulative Voting, Hierarchical Cumulative Voting}{6}
+\contentsline {subsubsection}{\numberline {2.3.5}Compensation Factor}{7}
+\contentsline {subsubsection}{\numberline {2.3.6}HCV Execution}{8}
+\contentsline {subsubsection}{\numberline {2.3.7}Example of Hierarchical Cumulative Voting}{8}
+\contentsline {subsection}{\numberline {2.4}Compositional Data Analysis}{9}
+\contentsline {subsubsection}{\numberline {2.4.1}Problem of Zeroes}{11}
+\contentsline {subsubsection}{\numberline {2.4.2}Isometric Log-Ratio Transformation}{11}
+\contentsline {section}{\numberline {3}Related Work}{12}
+\contentsline {section}{\numberline {4}Methodology}{12}
+\contentsline {subsection}{\numberline {4.1}Selection of Research Methods}{12}
+\contentsline {subsection}{\numberline {4.2}Research Questions}{13}
+\contentsline {section}{\numberline {5}Systematic Literature Review}{14}
+\contentsline {subsection}{\numberline {5.1}Data Sources and Search Strategy}{15}
+\contentsline {subsection}{\numberline {5.2}Study Selection}{15}
+\contentsline {subsection}{\numberline {5.3}Quality Evaluation}{16}
+\contentsline {subsubsection}{\numberline {5.3.1}Is the Study Right?}{16}
+\contentsline {subsubsection}{\numberline {5.3.2}Is It the Right Study?}{17}
+\contentsline {subsubsection}{\numberline {5.3.3}Rating of the Studies}{18}
+\contentsline {subsection}{\numberline {5.4}Data Extraction}{20}
+\contentsline {section}{\numberline {6}Equality of Cumulative Votes }{20}
+\contentsline {subsection}{\numberline {6.1}Testing Equality of Two Items}{21}
+\contentsline {subsection}{\numberline {6.2}Grouping Prioritization Items}{23}
+\contentsline {section}{\numberline {7}Results}{24}
+\contentsline {subsection}{\numberline {7.1}State of practice in Empirical Studies that use CV or Analyse the Results of CV (RQ 1)}{24}
+\contentsline {subsection}{\numberline {7.2}CV Result Analysis Methods Identified by RQ 1 (RQ 2)}{25}
+\contentsline {subsubsection}{\numberline {7.2.1}Problems with Compositional Data Analysis in Primary Studies}{28}
+\contentsline {subsection}{\numberline {7.3}Identifying Prioritization Items with Equal Priority Using ECV (RQ 3).}{29}
+\contentsline {section}{\numberline {8}Discussion and Conclusions}{30}
+\contentsline {subsection}{\numberline {8.1}Implications for Practitioners}{31}
+\contentsline {subsection}{\numberline {8.2}Implications for Academia}{31}
+\contentsline {subsection}{\numberline {8.3}Validity Threats}{32}
+\contentsline {subsection}{\numberline {8.4}Future Research}{33}
+\contentsline {subsection}{\numberline {8.5}Conclusions}{34}
+\contentsline {section}{\numberline {Appendix A}Primary Studies}{35}
+\contentsline {section}{\numberline {Appendix B}CV Result Analysis Methods}{37}
+\contentsline {section}{\numberline {Appendix C}Biplots}{38}
+\contentsline {subsection}{\numberline {Appendix C.1}Drawing biplot}{38}
+\contentsline {section}{\numberline {Appendix D}Data Extraction Form}{42}
+\contentsline {section}{\numberline {Appendix E}Quality Evaluation Checklist}{43}
+\contentsline {section}{\numberline {Appendix F}Extracted Data}{44}
+\contentsline {section}{\numberline {Appendix G}Quality Evaluation}{55}
+\begingroup \small 
+\endgroup 

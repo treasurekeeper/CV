@@ -1,0 +1,131 @@
+
+\section{Discussion and Conclusions\label{discussion}}
+
+\parskip -5pt
+This section discusses the results of the systematic review and evaluation of ECV conducted as part of this study.
+\parskip 0pt
+
+% state
+CV has been applied in various areas, but most frequently in requirements prioritization and release planning, and quite often also as part of research methodologies.
+A large part of the studies have been conducted in Sweden, at Ericsson AB.% which is currently the world's largest telecommunication equipment vendor.
+One can see a slight increase in the interest in CV. During the last five years there have been more studies that use CV than between, say, year 2000--2005.
+
+% QE
+Overall, studies that use CV or analyse the results of CV have high quality in terms of correctness of research process and study realism.
+However, very few studies present prioritization of more than 30 items and the availability of research data is somewhat limited. In our particular case we were able to obtain data from 43\% of studies.
+
+\subsection{Implications for Practitioners}
+The results of this study provide decision support for industry practitioners.
+We believe that a collection of state of the practice studies help the adoption of CV prioritization method. (Top studies are summarized in Table~\ref{tab:Top-ranked}.)
+In addition, a set of CV analysis methods enables comprehensive understanding of the prioritization results. 
+(The analysis methods are presented in Table~\ref{goals_for_methods}.)
+One of the most common goals of CV analysis are to display of the prioritization results and, thus, to show the difference between several prioritization perspectives.
+
+Additionally, we present ECV---a novel method for CV analysis.
+Prioritization often results in the assignment of similar priorities to several prioritization items.
+ECV identifies prioritization items with similar priority and tests whether these items can be considered equal.
+In this case, ECV can be used in software release planning. For example, let us suppose that a set of software requirements are prioritized with regard to the implementation cost.
+First of all, ECV can then detect items with equal cost.
+Second, the equal items can be freely swapped between the releases.
+Finally, the decision to allocate a requirement to a particular release can be made based on another criteria, such as risk or business value.
+
+ECV has been successfully applied on a considerable amount of CV data and, additionally, has also detected equal items in different groups of HCV hierarchies.
+% 
+\subsection{Implications for Academia}
+
+In the systematic review 36\% of papers were revealed by the snowball sampling.
+That is a considerable amount.
+Several studies do not mention the name of the prioritization method (i.e. cumulative voting or hundred dollar test).
+Others are not available through selected databases because they are conference publications or theses.
+It shows, in our opinion, that snowball sampling ought to be used in all systematic literature reviews.
+
+CV results are a special type of data---compositional data.
+Standard statistical analysis methods that assume the independence of the samples cannot be applied to CV results.
+In \citep{Aitchison1986} methods for the analysis of compositional data have been presented.
+The systematic review conducted as a part of this study revealed that 22 studies analyse the results of CV.
+Yet, only one study uses compositional data analysis methods, i.e.\ \citep{Chatzipetrou2010}.
+
+The small use of compositional data analysis is really not surprising, because literature describing CV does not state that the results are compositional data.
+Standard statistical analysis methods may produce useful results for compositional data.
+However, there are cases when they are misleading or even faulty.
+Section \ref{codaProblems} contains evidence of inappropriate use of statistical methods by several papers.
+
+This study has collected a set of compositional data analysis methods for CV analysis (see Table~\ref{goals_for_methods}). 
+We believe that this could help researchers to improve the analysis of CV results with appropriate methods.
+
+Since CV is associated with compositional data, it might be tempting to choose another requirements prioritization method. However, it would not solve the problem, because any ratio scale prioritization, for instance AHP, contains compositional data.
+
+The principal implications for the academia are the following:
+\begin{enumerate}
+\item All systematic literature reviews should include snowball sampling.
+\item Researchers can improve their statistical analysis of CV results using compositional data analysis methods collected and developed by this study.
+\item When CV or any other ratio scale prioritization method is taught, compositional data analysis should also be presented as part of the solution.
+\end{enumerate}
+
+% validity
+\subsection{Validity Threats}
+The validity of the systematic review is limited by the chosen databases, the design of the review, and human judgement in study selection and data extraction.
+
+To mitigate the threats we use the most popular databases in the field of software engineering.
+In the beginning of the systematic review a review protocol was developed, peer-reviewed, and revised.
+Search strategy was validated against a set of previously known papers obtained from other researchers.
+One of many terms used to name cumulative voting is `\$100 method'.
+We were not able to search for this term because non of the chosen databases support search for special characters like `\$' and the search string `100 method' yields hundreds of thousands of results.
+To increase the likelihood discovering relevant studies snowball sampling was extensively performed.
+
+To increase the validity of study selection, all included studies and 20 randomly selected excluded studies were examined by two researchers.
+There were no disagreement on the inclusion/exclusion of the studies.
+
+The large number of studies identified by the snowball sampling (15 out of 40 studies) may be caused by faulty design or execution of the search in the databases.
+There are several reasons why the studies revealed by snowball sampling are not revealed by the search in databases. Reason for each study is given in Table~\ref{snowPapers}.
+Based on these reasons we argue that snowball sampling does not indicate any problems with the design of the search in the databases.
+
+Four studies are not found because they are not available through databases used in this systematic review. Out of them one is master thesis, two are conference publications and one is a publication in the area of forestry.
+Seven studies do not mention the name of the prioritization method (i.e. hundred dollar method or cumulative voting).
+Only phrases like "distribution of a predefined amount of fictitious money (\$100,000) over the items to be prioritized" or "1000 points" allowed us to identify that CV is used.
+One paper used previously unknown name for CV - 100-point technique.
+
+The quality of the data extraction and quality evaluation was validated using inter-rater agreement analysis.
+In our case, 10\% of the studies were rated by two researchers and Krippendorff's alpha was calculated.
+The agreement for the data extraction results was 0.86 and the agreement for the quality evaluation was 0.73 (indicating a credible level of quality).
+
+The failure to obtain raw results of several CV studies may be due to several reasons, e.g.\ the authors of the primary studies might be unwilling to communicate the data because of lack of motivation or spare time. In our case we found that we were able to minimize this threat by searching for the researchers through various channels, e.g.\ Google search, LinkedIn and Facebook.
+
+There are two main validity threats with ECV.
+First, ECV may not detect prioritization items with equal priority.
+Second, ECV may produce a false positive result. There may be a real difference between items that ECV claims as being equal.
+
+To mitigate the first threat ECV was applied on artificially created test data with and without items with similar priority.
+ECV worked correctly in both cases.
+
+To mitigate the second threat we visually inspected the results of the application of ECV on the real world data.
+We concluded that items identified by ECV can be considered equal.
+
+CV results used in the evaluation of ECV were tested for normality.
+The tests indicated that CV results are not normally distributed.
+Therefore, the design of ECV was based on a non-parametric statistical test.
+
+\subsection{Future Research}
+There are very few studies that apply CV on prioritization sets of more than 30 items.
+However, in requirements engineering, industry practitioners need to prioritize much larger numbers of software requirements.
+Therefore, the state of art could benefit from the application CV and HCV to large prioritization sets.
+
+The proposed method, ECV, has now been evaluated on existing research data. To further evaluate the ECV, it could be applied in direct industry practice and in prioritization cases with a larger number of prioritization items.
+Additionally, compositional data analysis methods, as the ones identified by this paper, should be tried with other prioritization methods that produce ratio scale results.
+
+\subsection{Conclusions}
+CV prioritization results are special type of data -- compositional data.
+Any analysis of CV results must take into account the compositional nature of the CV results.
+
+This study presents a systematic literature review of the empirical use of CV.
+CV has been applied in various areas, but most frequently in requirements prioritization and release planning.
+The review has resulted in a collection of state of the practice studies and CV result analysis methods.
+We believe that it can help the adoption of CV prioritization method.
+
+Snowball sampling is performed as a part of the review.
+Since it revealed 36\% out of all primary studies, 
+we believe that in future snowball sampling should be used in all systematic reviews.
+
+Additionally, we present ECV---a novel method for CV analysis.
+As suggested by our evaluation, ECV is able to detect prioritization items with equal priority (i.e. items that have insignificant difference in priority).
+The evaluation of ECV is based on the data obtained from the authors of the primary studies.
