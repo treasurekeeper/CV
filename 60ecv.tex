@@ -1,6 +1,6 @@
 \section{Equality of Cumulative Votes \label{ecv}}
 
-In the last section we described the execution of the systematic literature review. In order to perform a more thorough analysis later we here present the design of ECV before presenting the results of the systematic literature review. For the results of the evaluation of ECV please see Section~\ref{rq3} (ECV is implemented in the \R{} programming language \citep{Ihaka1996} and the code can be found at \citep{Rinkevics2011}.)
+In the last section we described the execution of the systematic literature review. In order to perform a more thorough analysis later we here present the design of ECV before presenting the results of the systematic literature review. For the results of the evaluation of ECV please see Section~\ref{rq3} (ECV is implemented in the $R$ programming language \citep{Ihaka1996} and the code can be found at \citep{Rinkevics2011}.)
 
 In CV stakeholders may assign similar or equal values to several prioritization items. As a result the difference between the items is small. The variation in priorities is caused not only by the difference between prioritization items but also by human error and lack of information for decision making. For instance, people tend to simplify the task of prioritization by assigning rounded values to items or giving equal values to several items \citep{Groves2009}.
 
@@ -68,7 +68,7 @@ Otherwise a non-parametric estimation of the distribution function is needed.
 In our case, the CV result data obtained from the primary studies identified by the systematic review, were tested for normality using the Anderson-Darling test.
 The tests we performed indicated, quite strongly, that in most of the prioritization cases the data is not normally distributed.
 Hence, our recommendation is that, in general, a non-parametric approach should be used to determine the probability density function, and one such, common, approach would be to use the kernel density estimation.
-(In our implementation of ECV in the \R{} programming language, kernel density estimation is performed using the package $ks$.)
+(In our implementation of ECV in the $R$ programming language, kernel density estimation is performed using the package $ks$.)
 
 To determine the probability of $\bar{x}$ being between $a$ and $b$ the following equation is used:
 \begin{equation}
