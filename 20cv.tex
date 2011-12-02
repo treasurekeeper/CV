@@ -32,7 +32,7 @@ It is advisable to randomize the order of items in a prioritization
 list. This is necessary to minimize the effect of order on the prioritization
 results \citep{Svahnberg2009}.
 
-\subsubsection{Benefits and drawbacks of Cumulative Voting}
+\subsubsection{Benefits and Drawbacks of Cumulative Voting}
 Compared to AHP, CV is faster and easier to learn and use \citep{Berander2005,Ahl2005}.
 AHP benefits from consistency check, but CV does not require this because
 all prioritization items are evaluated simultaneously \citep{Ahl2005}.
@@ -59,6 +59,7 @@ of stakeholders (Step 3 in Figure~\ref{fig:Example-of-Cumulative}).
 
 %
 \begin{figure}
+	\center
 \includegraphics[scale=0.55]{fig/cv}
 
 \caption{\label{fig:Example-of-Cumulative}Example of Cumulative Voting Performed
@@ -107,6 +108,7 @@ be grouped hierarchically by forming a tree structure (Figure~\ref{fig:Prionitiz
 
 %
 \begin{figure}
+	\center
 \includegraphics[scale=0.45]{fig/hcv-example1}
 
 \caption{\label{fig:Prionitization-Item-Hierarchy}Prioritization Item Hierarchy
@@ -208,6 +210,7 @@ These values must be summed together to form the final priority of the item.
 
 %
 \begin{figure}
+	\center
 \includegraphics[scale=0.5]{\string"fig/hcv hierarchy\string".png}
 
 \caption{\label{fig:Overlapping-Prioritization-Item}Overlapping Prioritization
@@ -241,6 +244,7 @@ the `phonebook' sub-requirements.
 \begin{flushleft}
 %
 \begin{figure}
+\center
 \includegraphics[scale=0.5]{fig/hcv2}
 
 \caption{\label{fig:Example-of-Hierachical}Example of Hierarchical Cumulative
@@ -250,24 +254,25 @@ Voting, Requirement Hierarchy}
 
 \par\end{flushleft}
 
-\begin{table}[t]
+\begin{table}
+	\scriptsize
 \caption{\label{tab:Example-of-Hierarchical}Example of Hierarchical Cumulative Voting}
 
 \begin{tabular}{
-|>{\raggedright}p{0.18\columnwidth}
-|>{\raggedright}p{0.19\columnwidth}
-|>{\raggedright}p{0.22\columnwidth}
-|>{\raggedleft}p{0.15\columnwidth}
-|>{\raggedright}p{0.1\columnwidth}
-|}
+>{\raggedright}p{0.18\columnwidth}
+>{\raggedright}p{0.19\columnwidth}
+>{\raggedright}p{0.22\columnwidth}
+>{\raggedleft}p{0.15\columnwidth}
+>{\raggedright}p{0.1\columnwidth}
+}
 \hline
 Phone requirements & Compensation factor & Sub-requirements & Priority calculation & Final priority\tabularnewline
 \hline\hline
-Calendar & 2 & Reminder alarm & 40{*}30{*}2 & 2400\tabularnewline \hline
-Calendar & 2 & Specify repeated event & 60{*}30{*}2 & 3600\tabularnewline  \hline
-Phonebook & 3 & Hide contact & 40{*}20{*}3 & 1600\tabularnewline \hline
-Phonebook & 3 & Add picture & 20{*}20{*}3 & 800\tabularnewline \hline
-Phonebook \& Call & 3 \& 2 & Search contact & 40{*}20{*}3 + 50{*}50{*}2 & 7400\tabularnewline \hline
+Calendar & 2 & Reminder alarm & 40{*}30{*}2 & 2400\tabularnewline %\hline
+Calendar & 2 & Specify repeated event & 60{*}30{*}2 & 3600\tabularnewline  %\hline
+Phonebook & 3 & Hide contact & 40{*}20{*}3 & 1600\tabularnewline %\hline
+Phonebook & 3 & Add picture & 20{*}20{*}3 & 800\tabularnewline %\hline
+Phonebook \& Call & 3 \& 2 & Search contact & 40{*}20{*}3 + 50{*}50{*}2 & 7400\tabularnewline %\hline
 Call & 2 & Video call & 50 {*} 50 {*} 2 & 2500\tabularnewline
 \hline
 \end{tabular}

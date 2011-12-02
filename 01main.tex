@@ -1,3 +1,4 @@
+
 %% This is file `elsarticle-template-1a-num.tex',
 %%
 %% Copyright 2009 Elsevier Ltd
@@ -21,7 +22,7 @@
 %% $Id: elsarticle-template-1a-num.tex 151 2009-10-08 05:18:25Z rishi $
 %% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1a-num.tex $
 %%
-\documentclass[preprint,12pt]{elsarticle}
+\documentclass[preprint,11pt]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
@@ -51,7 +52,7 @@
 %% The lineno packages adds line numbers. Start line numbering with
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
 %% for the whole article with \linenumbers after \end{frontmatter}.
-%% \usepackage{lineno}
+\usepackage{lineno}
 
 %% natbib.sty is loaded by default. However, natbib options can be
 %% provided with \biboptions{...} command. Following options are
@@ -88,8 +89,9 @@
 \usepackage{amsmath}
 \usepackage{capt-of}
 \usepackage{url} 
+\usepackage{appendix}
 
-\journal{Nuclear Physics B}
+\journal{Information and Software Technology}
 
 \begin{document}
 
@@ -120,8 +122,6 @@
 
 %% References with bibTeX database:
 
-\bibliographystyle{model1a-num-names}
-\bibliography{library}
 
 %% Authors are advised to submit their bibtex database files. They are
 %% requested to list a bibtex style file in the manuscript if they do
