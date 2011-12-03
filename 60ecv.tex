@@ -1,10 +1,9 @@
 \section{Equality of Cumulative Votes \label{ecv}}
-
-In the last section we described the execution of the systematic literature review. In order to perform a more thorough analysis later we here present the design of ECV before presenting the results of the systematic literature review. For the results of the evaluation of ECV please see Section~\ref{rq3} (ECV is implemented in the $R$ programming language \citep{Ihaka1996} and the code can be found at \citep{Rinkevics2011}.)
+In the previous section we described the execution of the systematic literature review. In order to perform a more thorough analysis later we here present the design of ECV before presenting the results of the systematic literature review. For the results of the evaluation of ECV please see Section~\ref{rq3} (ECV is implemented in the $R$ programming language \citep{Ihaka1996} and the code can be found at \citep{Rinkevics2011}.)
 
 In CV stakeholders may assign similar or equal values to several prioritization items. As a result the difference between the items is small. The variation in priorities is caused not only by the difference between prioritization items but also by human error and lack of information for decision making. For instance, people tend to simplify the task of prioritization by assigning rounded values to items or giving equal values to several items \citep{Groves2009}.
 
-During prioritization it may be beneficial to know which items are equal. A common example is software release planning where requirements are distributed among several product releases. If two or more requirements are considered equal they can be freely interchanged between the releases, and other criteria, such as cost or effort, may be used to used as sole indicators for planning that particular release.
+During prioritization it may be beneficial to know which items are equal. A common example is software release planning where requirements are distributed among several product releases. If two or more requirements are considered equal they can be freely interchanged between the releases, and other criteria, such as cost or effort, may be used as sole indicators for planning that particular release.
 
 % testing equality
 \subsection{\label{Testing-Equality-of}Testing Equality of Two Items}
@@ -12,7 +11,7 @@ There are two ways to determine which prioritization items have similar priority
 One approach is to find items that are different and consider other items as equal.
 Another approach is to find items that are equal.
 
-The first approach uses statistical tests to evaluate differences between two population means in order to determine that two items are different.
+The first approach uses statistical tests to evaluate differences between e.g.\ two population means, in order to determine that two items are different.
 Populations in this case consist of priorities assigned by all stakeholders to a particular prioritization item.
 The number of stakeholders that perform the prioritization is frequently small.
 Hence, the size of the sample is very often too small for statistical tests to detect a significant difference and the tests, thus, identify too many equal items to make any useful conclusions.
@@ -24,7 +23,7 @@ If the probability is higher than 70\% the items are considered equal.
 
 The input to ECV is an $n\times p$ matrix $A$ that contains the raw results of the prioritization.
 The columns of the matrix represent prioritization items while rows represent stakeholders.
-ECV performs the following operations for the priorities of each two prioritization items:
+ECV performs the following operations for the priorities of each of the two prioritization items:
 
 \begin{enumerate}
 \item Replace zeroes in CV results.
@@ -37,6 +36,7 @@ ECV performs the following operations for the priorities of each two prioritizat
 Since CV results are compositional data, zeroes in $A$ must be replaced with other values.
 This is done using the multiplicative replacement strategy which is described in Section~\ref{Problem-of-Zeroes}.
 Next, two columns are extracted from matrix $A$ to create the new matrix $B$:
+
 \begin{equation}
 	B=\left[a_{*,k}a_{*,l}\right]\label{eq:b}
 \end{equation}
@@ -58,7 +58,7 @@ The purpose of the test is to determine what the probability is of the relative 
 This means determining the probability of the ratio $k/l$ between the items $k$ and $l$ as being in the range of $\frac{3}{4}$ to $\frac{4}{3}$. Or in terms of log-ratios it means determining the probability of $ilr(k,l)$ being between $ilr(3,4)$ and $ilr(4,3)$.
 Hence, the objective of the test is to determine the probability of the sample mean (i.e.\ mean value of $C$) laying between the two values.
 
-The probability that the mean takes a particular value can be expressed in form of a cumulative distribution function.
+The probability that the mean takes a particular value can be expressed in the form of a cumulative distribution function.
 The probability of the mean being between two values $a$ and $b$ (where $a$ is smaller than $b$) can be determined by subtracting the probability of the mean being smaller than $a$ from probability of the mean being smaller than $b$.
 
 However, CV result data may or may not be normally distributed.
@@ -71,6 +71,7 @@ Hence, our recommendation is that, in general, a non-parametric approach should 
 (In our implementation of ECV in the $R$ programming language, kernel density estimation is performed using the package $ks$.)
 
 To determine the probability of $\bar{x}$ being between $a$ and $b$ the following equation is used:
+
 \begin{equation}
 	p=P(b)-P(a)\label{eq:mean-between-a-b}
 \end{equation}
@@ -113,7 +114,6 @@ i4 & equal & - & - & equal\tabularnewline
 \end{table}
 
 \subsection{Grouping Prioritization Items}
-
 When equal items are determined they must be divided into groups of equal items. Division must be performed in such a way that each two items in a group are equal. The test for equality of the items described in Section~\ref{Testing-Equality-of} is not transitive. Hence, if prioritization item $A$ is equal to $B$ and $B$ is equal to $C$ then it does not automatically imply that $A$ is equal to $C$. Therefore, there may be several ways to group the equal items. The two possible division criteria that we have considered in this study are:
 
 \begin{enumerate}

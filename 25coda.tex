@@ -1,32 +1,31 @@
 
 \subsection{\label{coda}Compositional Data Analysis}
-
-CV results can be seen as a special type of data---compositional data.
+CV results can be seen as a special type of data, i.e.\ compositional data.
 Compositional data does not contain absolute values. It shows only
 the relative weight of a component in a whole. In \citep{Chatzipetrou2010} the authors
 propose the use of compositional data analysis for the statistical analysis of CV. 
 
-A compositional data item is a vector
-($x$) of positive components with a constant sum $k$:
+A compositional data item is a vector ($x$) of positive components with a constant sum $k$:
 
 \begin{equation}
-x=(X_{1};\, X_{2};\,...;\, X_{n})\, where\, x_{i}\geq0\, and\,\sum_{j=1}^{n}x_{j}=k
+x=(X_{1};\, X_{2};\,\ldots;\, X_{n})\, where\, x_{i}\geq0\, and\,\sum_{j=1}^{n}x_{j}=k
 \label{eq:compositional-data}
 \end{equation}
 
 The property of the sum of the items being restricted is called the constant
 sum constraint. In CV, priorities assigned by a stakeholder to the items of a prioritization
 set is a compositional data vector with a constant sum of 100.
-The value of $k$ (i.e.\ 100 in this case) is arbitrary and does not affect the analysis of the data because the
-information is contained in the ratios between the components of the vector.
-The vector can sum up to any number but still hold the same data, i.e.\ vectors (1, 2, 7) and (10, 20, 70) are in this case considered equivalent.
+The value of $k$ (i.e.\ 100 in this case) is arbitrary and does not affect the analysis 
+of the data because the information is contained in the ratios between the components of 
+the vector. The vector can sum up to any number but still hold the same data, i.e.\ vectors 
+(1, 2, 7) and (10, 20, 70) are in this case considered equivalent.
 
 The priority of an item is relative to the priority of the other items
 in the set. Hence, the priority of an individual item is meaningless without
 context, i.e.\ the complete set of items. The same item may receive different priority
 when put in two different prioritization sets. If the item is put
-in a set of items with high priority it will receive lower relative
-priority. This also holds true the other way around; if the item is put in a set
+in a set of items with high priority it will receive a lower relative
+priority. This also holds true the other way around i.e.\ if the item is put in a set
 with low priority items its priority will be higher.
 
 % section about all the limitations, errors
@@ -42,14 +41,15 @@ between the items.
 Standard parametric statistical tests require that data vectors have
 multivariate normal distribution. Vector $X=(X_{1}, X_{2}, \ldots, X_{n})$
 is considered to have multivariate normal distribution if any linear
-combination of its parts is normally distributed. Linear combination
+combination of its parts is normally distributed, and linear combination
 is defined by:
+
 \begin{equation}
 	Y=a_{1}X_{1}+a_{2}X_{2}+\ldots+aX_{n}
 \end{equation}
 
 where $Y$ is the product of lineal combination and $a_{i}$ is any
-real number. Since the sum of priorities assigned in CV must add up
+real number. Now, since the sum of priorities assigned in CV must add up
 to 100 (or any other constant number) at least one linear combination
 of $X$ is not normally distributed because it must always add up to
 100:
@@ -58,20 +58,18 @@ of $X$ is not normally distributed because it must always add up to
 	Y=1\cdot X_{1}+1\cdot X_{2}+\ldots+1\cdot X_{n}=100
 \end{equation}
 
-In our opinion, the above shows that CV results do not follow a multivariate normal distribution and, hence, means that they must not be analysed using parametric statistical tests \citep{Pawlowsky-Glahn2006}.
-
+In our opinion, the above indicates, quite strongly, that CV results do not follow a multivariate normal distribution and, hence, it follows that they should be analyzed using non-parametric statistical tests \citep{Pawlowsky-Glahn2006}.
 
 \subsubsection{\label{Problem-of-Zeroes}Problem of Zeroes}
-
 Compositional data analysis requires that ratios between any components in a vector can be
-computed. Computing a ratio with a zero value is meaningless. This causes
-a problem because CV allows stakeholders to assign zero priorities
-to some prioritization items. There are two types of zeroes in compositional
-data: essential and rounded.
+computed. But computing a ratio with a zero value is, in this case, meaningless. This is
+a problem since CV allows stakeholders to assign zero priorities
+to some prioritization items (we would even strongly argue that this is very common). 
 
+In compositional data there are two types of zeroes: essential and rounded.
 Essential zeroes mean that a data component
 is not present. Rounded zeroes mean that the component is present but
-its value is very low. We can assume that zeroes in CV results are
+its value is very low. We, as others have before us, conjecture that zeroes in CV results are 
 rounded because the priority of an item is a completely abstract notion
 and the instrument for measuring priority is human judgement \citep{Chatzipetrou2010}.
 
@@ -79,25 +77,25 @@ Before compositional data analysis can be applied to CV results, we must first r
 zeroes in the data. One approach can be to forbid stakeholders
 to assign zero priorities. This approach is used in e.g.\ \citep{Pettersson2008}.
 But this can add some unnecessary complexity to the prioritization
-process. In \citep{Chatzipetrou2010} the authors propose the use of a multiplicative replacement
-strategy (as defined in \citep{Martin-Fernandez2003}) for CV result analysis.
+process and, explicitly, delimits an expert's freedom. 
+In \citep{Chatzipetrou2010} the authors propose the use of a multiplicative 
+replacement strategy (as defined in \citep{Martin-Fernandez2003}) for CV result analysis.
 
 This method replaces rounded zeroes with small values using the expression
-
 \begin{equation}
 r_{j}=\begin{cases}
 \delta_{j}, & if\, x_{j}=0,\\
 (1-\frac{\sum_{k\mid x_{k}=0}\delta_{k}}{c})x_{j}, & if\, x_{j}>0,\end{cases}\label{eq:zero-replace}
 \end{equation}
 
-where $\delta_{j}$ is the imputed value and $c$ is the constant sum constraint (the same as $k$ in equation (\ref{eq:compositional-data})).
-In order for the total sum of components to stay constant the equation subtracts some value from
-the items with a priority higher than zero.
-More is subtracted from components with higher values than from the components with lower values and the value of the imputed $\delta_{j}$ is arbitrary.
+where $\delta_{j}$ is the imputed value and $c$ is the constant sum constraint.
+In order for the total sum of components to stay constant, the equation subtracts 
+some value from the items with a priority higher than zero.
+More is subtracted from components with higher values than from components with lower 
+values (and the value of the imputed $\delta_{j}$ is arbitrary).
 
-\subsubsection{\label{Isometric-Logratio-Transformation}Isometric Log-Ratio Transformation}
-
-In order to be able to apply standard statistical methods to compositional data it must be transformed to remove the inherent correlation of the values.
+\subsubsection{\label{Isometric-Logratio-Transformation}Isometric log-ratio transformation}
+In order to apply standard statistical methods to compositional data it must be transformed to remove the inherent correlation of the values.
 Compositional data analysis proposes special transformations that change the compositional data values to unconstrained real values.
 One such transformation is isometric log-ratio ($ilr$) transformation (as proposed by \citep{Pawlowsky-Glahn2006,Filzmoser2007a}):
 
