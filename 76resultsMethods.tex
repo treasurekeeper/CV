@@ -6,7 +6,7 @@ The main goals for CV result analysis are presented in Table \ref{goals_for_meth
 In order to present prioritization results many studies use charts or
 tables. These charts and tables show the average priority of each prioritization item that is computed from priorities assigned by all stakeholders.
 In \citep{Jonsson2005a} a table of five items with highest total priority is presented. 
-\citep{Kuzniarz2010} shows tables with minimum, maximum, median, mean, and standard deviation of priorities assigned by different stakeholders to a particular prioritization item. Finally, in \citep{Rovegard2008,Kuzniarz2010} error bars are added to the chart of final priorities (denoting the standard deviation of priorities).
+\citep{Kuzniarz2010} shows tables with $min$, $max$, $\tilde{x}$, $\bar{x}$ and $\sigma$ of priorities assigned by different stakeholders to a particular prioritization item. Finally, in \citep{Rovegard2008,Kuzniarz2010} error bars are added to the chart of final priorities (denoting $\sigma$ of priorities).
 
 In a few cases final priorities are presented in the form of ranks and CV results are degraded from ratio to ordinal scale. This is done when the interest lies only in the order of final priorities.
 
@@ -14,9 +14,10 @@ Several papers are interested in the difference between priorities from
 different prioritization perspectives (e.g.\ current and ideal situation)
 or stakeholder groups (e.g.\ software developers and management). Pearson
 or Spearman correlation coefficients are commonly used to determine what 
-the level of similarity between all priorities from two perspectives is.
-Whereas, Wilcoxon, Kruskal-Wallis, Nemenyi-Damico-Wolfe-Dunn tests and the $\chi^2$ statistic are used to detect if there is a significant
-difference in the value of one prioritization item from two or more perspectives. In addition, PCA is used to detect if there are distinct groups of stakeholders with common priorities \citep{Chatzipetrou2010,Pettersson2008,Wohlin2006}.
+the level of similarity is between all priorities from two perspectives.
+Whereas, Wilcoxon, Kruskal-Wallis, Nemenyi-Damico-Wolfe-Dunn tests and the 
+$\chi^2$ statistic are used to detect if there is a significant
+difference in the value of one prioritization item from two or more perspectives. In addition, PCA is used to detect if there are distinct groups of stakeholders with common priorities \citep{Pettersson2008,Chatzipetrou2010,Wohlin2006}.
 
 In some cases, a stakeholder may assign equal priority to several prioritization items or leave several items unrated, e.g.\ the stakeholder may not have carefully considered all prioritization items. Hence, the difference between the items may have been unnoticed.
 
@@ -34,9 +35,7 @@ The satisfaction chart shows stakeholder satisfaction with prioritization
 results by calculating the correlation between final priorities and priorities
 assigned by a stakeholder.
 
-The use of biplots and ternary plots are proposed in \citep{Chatzipetrou2010}. A biplot shows final priorities and stakeholder viewpoints in a two dimensional plane while a ternary plot shows prioritization items inside a triangle. Ternary plots show how many low, medium or high priorities are assigned to
-a prioritization item. The corners of the triangle represent high, medium, and low priority, e.g.\ if a prioritization item has received mostly high priority values then it is shown closer to the high priority corner.
-%Further information concerning interpretation of biplots of CV results is available in \ref{biplot}.
+The use of bi-plots and ternary plots are proposed in \citep{Chatzipetrou2010}. A bi-plot shows final priorities and stakeholder viewpoints in a two dimensional plane while a ternary plot shows prioritization items inside a triangle. Ternary plots show how many low, medium or high priorities are assigned to a prioritization item. The corners of the triangle represent high, medium, and low priority, e.g.\ if a prioritization item has received mostly high priority values then it is shown closer to the high priority corner.
 
 \begin{table}
 	\scriptsize
@@ -56,14 +55,14 @@ Chart or table of final priorities\tabularnewline
 Difference between priorities assigned by different perspectives (status
 quo, ideal situation) or different stakeholder groups (developers,
 management) \citep{Chatzipetrou2010}& 
-Biplot \tabularnewline
+Bi-plot \tabularnewline
 \hline 
 
-detect stakeholder groups with similar priorities \citep{Chatzipetrou2010}& Biplot \tabularnewline
+detect stakeholder groups with similar priorities \citep{Chatzipetrou2010}& Bi-plot \tabularnewline
 \hline 
 
 show the relative number of issues that have received high, medium,
-or low priority \citep{Chatzipetrou2010}& Ternalry plot \tabularnewline
+or low priority \citep{Chatzipetrou2010}& Ternary plot \tabularnewline
 \hline 
 
 detect stakeholder groups with common priorities \citep{Chatzipetrou2010}& PCA \tabularnewline
@@ -99,10 +98,10 @@ ECV \tabularnewline
 
 \subsubsection{\label{codaProblems}Problems with Compositional Data Analysis in Primary Studies}
 
-A few primary studies, as revealed by the systematic review, have problems with the analysis of compositional data. 
+A few primary studies, as revealed by the systematic review, have problems with the analysis of compositional data.
 
 In \citep{Wohlin2006,Pettersson2008} standard PCA is performed without applying log-ratio transformations to compositional data. According to \citep{Aitchison1983}, this is likely to be inadequate and in \citep{Filzmoser2007}, a more appropriate method for performing PCA of compositional data is shown.
 
 The normality of compositional data is defined in \citep{PawlowskyGlahn2007}. It is stated that compositional data must first be transformed using isometric log-ratio transformation before the tests for normality can be applied. \citep{Jonsson2005a} violates this requirement by applying the Shapiro-Wilk test for normality to untransformed compositional data.
 
-The Kruskal-Wallis test is used in \citep{Jonsson2005a} to analyse compositional data. The test is used to evaluate the  difference between three organization levels. The Kruskal-Wallis test assumes that variables within each sample are independent \citep{Kruskal1952a}. However, values within compositional data vectors are not independent (as described in Section \ref{coda}). Hence, we claim the Kruskal-Wallis test to be somewhat misused in \citep{Jonsson2005a}.
+The Kruskal-Wallis test is used in \citep{Jonsson2005a} to analyze compositional data. The test is used to evaluate the difference between three organization levels. The Kruskal-Wallis test assumes that variables within each sample are independent \citep{Kruskal1952a}. However, values within compositional data vectors are not independent (as described in Section \ref{coda}). Hence, we claim the Kruskal-Wallis test to be somewhat misused in \citep{Jonsson2005a}.
