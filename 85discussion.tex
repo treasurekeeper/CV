@@ -20,9 +20,8 @@ One of the most common goals of CV analysis is to display of the prioritization 
 
 Additionally, we present ECV---a novel method for CV analysis.
 Prioritization often results in the assignment of similar priorities to several prioritization items.
-%kri: answer to question below, imho:
-CV results contain both real priority and random error caused by human bias.
-Due to random errors equal prioritization items may receive different priorities.
+CV results contain both `real priorities' and random errors.
+Due to random errors, equal prioritization items may receive different priorities.
 ECV identifies such items. It allows stakeholders to disregard the random part of the CV results.
 Thus, ECV simplifies the understanding of the prioritization results.
 
@@ -34,8 +33,6 @@ Second, the equal items can be freely swapped between the releases.
 Finally, the decision to allocate a requirement to a particular release can be made based on another criteria, such as risk or business value.
 
 ECV has been successfully applied on a considerable amount of CV data and, additionally, has also detected equal items in different groups of HCV hierarchies.
-%rto: Once again, we have no idea what extra value we provide with ECV compared how they've done it before?!?
-%kri: see above
 
 \subsection{Implications for Academia}
 In the systematic review 36\% of papers were revealed by the snowball sampling.
@@ -47,9 +44,8 @@ It shows, in our opinion, that snowball sampling ought to be used in all systema
 CV results are a special type of data---compositional data.
 Standard statistical analysis methods that assume the independence of the samples cannot be applied to CV results.
 In \citep{Aitchison1986} methods for the analysis of compositional data have been presented.
-The systematic review conducted as a part of this study revealed that 22 studies analyze CV results; yet, only one study uses compositional data analysis methods, i.e.\ \citep{Chatzipetrou2010}.%rto: and how does our approach differ from Chatzipetrou's et al.? There is a very large probability that Lefteris Anglelis (one of the co-authors) will review this paper and he is good in statistics...
-%kri:
-None of the studies including \citep{Chatzipetrou2010} present methods for detecting items with equal priority is CV results. Hence, ECV is a unique method.
+The systematic review conducted as a part of this study revealed that 22 studies analyze CV results; yet, only one study uses compositional data analysis methods, i.e.\ \citep{Chatzipetrou2010}.
+None of the studies, including \citep{Chatzipetrou2010}, present methods for detecting items with equal priority in CV results. Hence, ECV is, in this respect, a unique method.
 
 The small use of compositional data analysis is really not surprising, since literature describing CV does not state that the results are compositional data.
 Standard statistical analysis methods may produce useful results for compositional data.
