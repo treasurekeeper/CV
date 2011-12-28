@@ -4,11 +4,11 @@
 
 This section presents the design of the systematic literature review. For the results of the execution please see Section~\ref{rq1} and \ref{rq2}.
 
-Table~\ref{tab:reviewActivites} presents an overview of activities performed during the systematic literature review. The review protocol was developed by one researcher and evaluated by another researcher. Studies were searched for in two iterations. The first search was performed by using databases. The second search was performed using snowball sampling \citep{Goodman1961} (snowball sampling examines the references of primary studies revealed by the first search). References that are relevant to the review, i.e.\ they pass the selection criteria, are then added to the set of primary studies.
+Table~\ref{tab:reviewActivites} presents an overview of activities performed during the systematic literature review. The review protocol was developed by one researcher and evaluated by another researcher. Studies were searched for in two iterations. The first search was performed by using databases. The second search was performed using snowball sampling \cite{Goodman1961} (snowball sampling examines the references of primary studies revealed by the first search). References that are relevant to the review, i.e.\ they pass the selection criteria, are then added to the set of primary studies.
 
 The search for papers was performed by a single researcher. Study selection, on the other hand, was performed by two researchers. First, one researcher examined all found studies. Next, another researcher re-examined all studies classified as primary studies in addition to 20 randomly selected excluded studies to ensure the quality of the selection.
 
-To ensure the quality of the review, the quality evaluation and data extraction was performed independently by two researchers. Inter-rater analysis was performed using Krippendorf's Alpha statistics \citep{Krippendorff1970,Krippendorff2004a}.
+To ensure the quality of the review, the quality evaluation and data extraction was performed independently by two researchers. Inter-rater analysis was performed using Krippendorf's Alpha statistics \cite{Krippendorff1970,Krippendorff2004a}.
 
 % timetable
 \begin{table}
@@ -56,26 +56,25 @@ To ensure the quality of the review, the quality evaluation and data extraction 
 
 % search strategy
 \subsection{Data Sources and Search Strategy}
-This SLR was designed based on the guidelines by Kitchenham \citep{Kitchenham2007}. First a trial search in electronic databases was conducted. In order to scale the review to a manageable, yet sufficient size, databases were searched with different search strings. Relevant papers that were found during the trial search were used to extract additional search strings. The trial search revealed that the number of studies that use CV is not very large. Therefore, we decided to include not only software engineering studies but also studies in other research areas, such as forestry or corporate governance, since one key aspect we intended to investigate was analysis methods for CV.
+This SLR was designed based on the guidelines by Kitchenham \cite{Kitchenham2007}. First a trial search in electronic databases was conducted. In order to scale the review to a manageable, yet sufficient size, databases were searched with different search strings. Relevant papers that were found during the trial search were used to extract additional search strings. The trial search revealed that the number of studies that use CV is not very large. Therefore, we decided to include not only software engineering studies but also studies in other research areas, such as forestry or corporate governance, since one key aspect we intended to investigate was analysis methods for CV.
 
 Since CV is frequently used in studies without mentioning this in the abstract, full text search in databases is preferable. Unfortunately not all databases support full text search. Full text search was performed in the IEEE Xplore and Springer Link databases. In ACM Digital Library, Inspec\slash Compendex, ISI Web of Knowledge, and SCOPUS only metadata was searched.
 Search strings consisting of a Boolean expression (A or B or C or D or E or F or G), where:
 
-\begin{table}
-	\scriptsize
-\begin{tabular}{
->{\raggedright}p{0.3\columnwidth}
->{\raggedright}p{0.4\columnwidth}
-}
-A -- Cumulative voting & E -- hundred dollar method \tabularnewline
-B -- 100 dollar method & F -- hundred dollar test \tabularnewline
-C -- 100 dollar test & G -- hundred point method \tabularnewline
-D -- 100 point method & \tabularnewline
-\end{tabular}
-\end{table}
+\begin{multicols}{2}
+	\begin{enumerate}[(A)]
+\item Cumulative voting  
+\item 100 dollar method
+\item 100 dollar test 
+\item 100 point method
+\item hundred dollar method
+\item hundred dollar test
+\item hundred point method
+\end{enumerate}
+\end{multicols}
 
 Search strings contained only synonyms of CV and they did not limit the research area to software engineering. The search was performed independently using each of the search strings in each database. 
-All search results were combined and documented using reference management software. The quality of the search strings and the selection of electronic databases were validated against a previously known core set of papers---\citep{Ahl2005,Berander2006,Chatzipetrou2010,Regnell2001}---checking that all papers from the core set were found by the search.
+All search results were combined and documented using reference management software. The quality of the search strings and the selection of electronic databases were validated against a previously known core set of papers---\cite{Ahl2005,Berander2006,Chatzipetrou2010,Regnell2001}---checking that all papers from the core set were found by the search.
 
 % study selection
 \subsection{Study Selection}
@@ -83,7 +82,7 @@ To select relevant papers a set of criteria were designed. The criteria for pape
 
 Papers were selected in two phases: based on metadata and based on full text.
 
-Obviously, the main criterion for inclusion of a paper is that it must present empirical use of CV or present an analysis of the results of using CV. However, there are papers that pass this criterion but are not relevant for this review. CV is frequently used in computer algorithms. There is a significant difference between the way that humans and computers make decisions. Since this review in concerned with human decisions we excluded papers that present CV that is not performed by humans. In addition, only papers that were written in English were selected and duplicate studies were automatically excluded by the citation management software used in this review.
+Obviously, the main criterion for inclusion of a paper is that it must present empirical use of CV or present an analysis of the results of using CV. However, there are papers that pass this criterion but are not relevant for this review. CV is frequently used in computer algorithms. There is a significant difference between the way that humans and computers make decisions. Since this review in concerned with human decisions we excluded papers that present CV that is not performed by humans. In addition, only papers that were written in English were selected and duplicate studies were automatically excluded by the citation management software used in this review. We searched for papers between 2001--2011. By then performing a snowball sampling of these papers we were convinced that we had gotten a representative sample and, futhermore, that the bulk of the studies would be relevant from a software engineering perspective.
 
 % Snowball
 %Table~\ref{tab:Paper-Selection-from} shows the results of the second paper selection.
@@ -174,7 +173,7 @@ Other studies may involve academic researchers that execute a project. For examp
 On the reality scale these studies are somewhere in between the purely academic and industrial studies.
 
 % the study type
-The \textbf{type} of the research study can be considered as a criterion for the evaluation of study realism. \citep{Kitchenham2004} suggest that study designs that are more rigorous (e.g.\ experiments) are more realistic than observational studies (e.g.\ case study) due to a higher level of control. On the other hand \citep{Ivarsson2010} rate study designs based on other criteria, i.e.\ how frequently each type of study design is used in an industrial or academic setting. If a study design is used more in an industrial setting, then it is considered more realistic. For instance, in software engineering, case studies are frequently used in industrial settings, whereas, experiments are usually performed in academia using students as subjects. Therefore, \citep{Ivarsson2010} argue that case studies are more realistic than  formal experiments. Obviously the effect of study design on the study realism may be interpreted in different ways. Therefore, we will not use this parameter in our quality evaluation.
+The \textbf{type} of the research study can be considered as a criterion for the evaluation of study realism. \cite{Kitchenham2004} suggest that study designs that are more rigorous (e.g.\ experiments) are more realistic than observational studies (e.g.\ case study) due to a higher level of control. On the other hand \cite{Ivarsson2010} rate study designs based on other criteria, i.e.\ how frequently each type of study design is used in an industrial or academic setting. If a study design is used more in an industrial setting, then it is considered more realistic. For instance, in software engineering, case studies are frequently used in industrial settings, whereas, experiments are usually performed in academia using students as subjects. Therefore, \cite{Ivarsson2010} argue that case studies are more realistic than  formal experiments. Obviously the effect of study design on the study realism may be interpreted in different ways. Therefore, we will not use this parameter in our quality evaluation.
 
 The statistical significance of the results of a study can be used to evaluate the significance of the study findings.
 This measure will not be used, because the studies that are evaluated belong to very different research areas, i.e.\ the significance levels of the findings of the studies are not directly comparable for meta-analysis.
@@ -197,14 +196,14 @@ If HCV is used all of the prioritization items on different levels are counted t
 
 The availability of raw results of CV is rated separately because it is especially important for our purposes (and for most other researchers in order to replicate a study). The data availability rating criteria is given in Table~\ref{tab:Research-Data-Availability}. If the data of a study are not available it is not possible to validate the results of the study and, hence, the credibility of the findings is lower. Ideally the data collected in the study should be presented directly in the paper. An alternative may be to make the data freely available online and reference the online source.
 
-The quality of the research methodology of a paper is rated according to a checklist presented in \ref{app:QE}. The checklist is based on guidelines for presenting research studies as presented in \citep{Wohlin2000,Jedlitschka2005} and the guidelines for quality evaluation of research studies presented in \citep{Ivarsson2010,Kitchenham2007}. Evaluation is done with regard to the rigor of the description and correctness of the research process and reasoning. Checklist items represent issues that research studies should implement and present in research paper. The checklist also contains item descriptions or questions that are used to evaluate the quality. Each item in the checklist is rated according to criteria presented in Table~\ref{tab:Study-Research-Methodology}. The final rating of correctness of the research process of a study is computed by summing up the ratings assigned to all items in the checklist.
+The quality of the research methodology of a paper is rated according to a checklist presented in \ref{app:QE}. The checklist is based on guidelines for presenting research studies as presented in \cite{Wohlin2000,Jedlitschka2005} and the guidelines for quality evaluation of research studies presented in \cite{Ivarsson2010,Kitchenham2007}. Evaluation is done with regard to the rigor of the description and correctness of the research process and reasoning. Checklist items represent issues that research studies should implement and present in research paper. The checklist also contains item descriptions or questions that are used to evaluate the quality. Each item in the checklist is rated according to criteria presented in Table~\ref{tab:Study-Research-Methodology}. The final rating of correctness of the research process of a study is computed by summing up the ratings assigned to all items in the checklist.
 
 Study rating criteria was validated during a trial data extraction. Two researchers each rated three randomly selected papers. Afterwards, differences in ratings were discussed and study rating criteria were updated to avoid differences in interpretation.
 
 % reality level
 \begin{table}
 	\scriptsize
-\caption{\label{tab:Study-Setting-Rating}Rating of study reality level}
+\caption{\label{tab:Study-Setting-Rating}Rating of study reality level.}
 \begin{tabular}{|>{\centering}p{0.2\columnwidth}|>{\centering}p{0.3\columnwidth}|>{\centering}p{0.39\columnwidth}|}
 \hline 
 Aspect & Contribute to relevance (rating 1) & Do not contribute to relevance (rating 0)\tabularnewline
@@ -221,7 +220,7 @@ Context & Industrial & Academia\tabularnewline
 % data availability
 \begin{table}
 	\scriptsize
-\caption{\label{tab:Research-Data-Availability}Research data availability rating}
+\caption{\label{tab:Research-Data-Availability}Research data availability rating.}
 \begin{tabular}{|>{\centering}p{0.1\columnwidth}|>{\raggedright}p{0.83\columnwidth}|}
 \hline 
 Rating & \centering{}Study rating criteria\tabularnewline
@@ -244,7 +243,7 @@ online source where all the data can be accessed.\tabularnewline
 % correctness
 \begin{table}
 	\scriptsize
-\caption{\label{tab:Study-Research-Methodology}Rating of correctness of research process}
+\caption{\label{tab:Study-Research-Methodology}Rating of correctness of research process.}
 \begin{tabular}{|>{\centering}p{0.1\columnwidth}|>{\raggedright}p{0.83\columnwidth}|}
 \hline 
 Rating & \centering{}Study rating criteria\tabularnewline
@@ -273,7 +272,7 @@ We can observe that study realism level rating for ST3 is 0. There are no studie
 % example of rating
 \begin{table}
 	\scriptsize
-\caption{\label{tab:Example-of-rating}Example of rating values}
+\caption{\label{tab:Example-of-rating}Example of rating values.}
 
 \begin{tabular}{|>{\centering}p{0.1\columnwidth}|>{\centering}p{0.18\columnwidth}|>{\centering}p{0.18\columnwidth}|>{\centering}p{0.18\columnwidth}|>{\centering}p{0.18\columnwidth}|}
 \hline 
@@ -291,7 +290,7 @@ ST3 & 0 & 3 & 10 & 6\tabularnewline
 % example of ranks
 \begin{table}
 	\scriptsize
-\caption{\label{tab:Example-of-ranking}Example of ranking values}
+\caption{\label{tab:Example-of-ranking}Example of ranking values.}
 
 \begin{tabular}{|>{\centering}p{0.1\columnwidth}|>{\centering}p{0.18\columnwidth}|>{\centering}p{0.18\columnwidth}|>{\centering}p{0.18\columnwidth}|>{\centering}p{0.18\columnwidth}|}
 \hline 
