@@ -1,12 +1,9 @@
 \subsection{\label{rq2}CV Result Analysis Methods Identified by RQ 1 (RQ 2)}
-The papers identified in the review use various CV result analysis
-methods. 
+The papers identified in the review use various CV result analysis methods. 
 The main goals for CV result analysis are presented in Table \ref{goals_for_methods} and a summary of methods used in the primary studies can be found in Section \ref{analysisMethods}.
 
-In order to present prioritization results many studies use charts or
-tables. These charts and tables show the average priority of each prioritization item that is computed from priorities assigned by all stakeholders.
-In \cite{Jonsson2005a} a table of five items with highest total priority is presented. 
-\cite{Kuzniarz2010} shows tables with $min$, $max$, $\tilde{x}$, $\bar{x}$ and $\sigma$ of priorities assigned by different stakeholders to a particular prioritization item. Finally, in \cite{Rovegard2008,Kuzniarz2010} error bars are added to the chart of final priorities (denoting $\sigma$ of priorities).
+In order to present prioritization results many studies use charts or tables. These charts and tables show the average priority of each prioritization item that is computed from priorities assigned by all stakeholders. In \cite{Jonsson2005a} a table of five items with highest total priority is presented. 
+\cite{Kuzniarz2010} shows tables with $min$, $max$, $\tilde{x}$, $\bar{x}$ and $\sigma$ of priorities assigned by different stakeholders to a particular prioritization item. Finally, in \cite{Kuzniarz2010,Rovegard2008} error bars are added to the chart of final priorities (denoting $\sigma$ of priorities).
 
 In a few cases final priorities are presented in the form of ranks and CV results are degraded from ratio to ordinal scale. This is done when the interest lies only in the order of final priorities.
 
@@ -17,12 +14,17 @@ or Spearman correlation coefficients are commonly used to determine what
 the level of similarity is between all priorities from two perspectives.
 Whereas, Wilcoxon, Kruskal-Wallis, Nemenyi-Damico-Wolfe-Dunn tests and the 
 $\chi^2$ statistic are used to detect if there is a significant
-difference in the value of one prioritization item from two or more perspectives. In addition, PCA is used to detect if there are distinct groups of stakeholders with common priorities \cite{Pettersson2008,Chatzipetrou2010,Wohlin2006}.
+difference in the value of one prioritization item from two or more perspectives. 
+In addition, PCA is used to detect if there are distinct groups of stakeholders 
+with common priorities \cite{Pettersson2008,Chatzipetrou2010,Wohlin2006}.
 
 In some cases, a stakeholder may assign equal priority to several prioritization items or leave several items unrated, e.g.\ the stakeholder may not have carefully considered all prioritization items. Hence, the difference between the items may have been unnoticed.
 
 In \cite{Berander2006a} the scalability of prioritization is measured
-using two charts. The first chart shows the average percentages of items given a non-zero value. The second chart shows average percentages of divergence of values. If a stakeholder assigns equal priorities to many prioritization items the divergence of values is low. Unfortunately it is unclear from \cite{Berander2006a} how the average percentage of divergence is calculated.
+using two charts. The first chart shows the average percentages of items given 
+a non-zero value. The second chart shows average percentages of divergence of values. 
+If a stakeholder assigns equal priorities to many prioritization items the divergence 
+of values is low. Unfortunately it is unclear from \cite{Berander2006a} how the average percentage of divergence is calculated.
 
 In \cite{Regnell2000} distribution, disagreement, and satisfaction charts are presented.
 The distribution chart shows how the final value of a prioritization
@@ -35,7 +37,12 @@ The satisfaction chart shows stakeholder satisfaction with prioritization
 results by calculating the correlation between final priorities and priorities
 assigned by a stakeholder.
 
-The use of bi-plots and ternary plots are proposed in \cite{Chatzipetrou2010}. A bi-plot shows final priorities and stakeholder viewpoints in a two dimensional plane while a ternary plot shows prioritization items inside a triangle. Ternary plots show how many low, medium or high priorities are assigned to a prioritization item. The corners of the triangle represent high, medium, and low priority, e.g.\ if a prioritization item has received mostly high priority values then it is shown closer to the high priority corner.
+The use of bi-plots and ternary plots are proposed in \cite{Chatzipetrou2010}. A bi-plot shows 
+final priorities and stakeholder viewpoints in a two dimensional plane while a ternary plot shows 
+prioritization items inside a triangle. Ternary plots show how many low, medium or high priorities 
+are assigned to a prioritization item. The corners of the triangle represent high, medium, and 
+low priority, e.g.\ if a prioritization item has received mostly high priority values then it 
+is shown closer to the high priority corner.
 
 \begin{table}
 	\scriptsize
@@ -100,8 +107,8 @@ ECV \tabularnewline
 
 A few primary studies, as revealed by the systematic review, have problems with the analysis of compositional data.
 
-In \cite{Wohlin2006,Pettersson2008} standard PCA is performed without applying log-ratio transformations to compositional data. According to \cite{Aitchison1983}, this is likely to be inadequate and in \cite{Filzmoser2007}, a more appropriate method for performing PCA of compositional data is shown.
+In \cite{Pettersson2008,Wohlin2006} standard PCA is performed without applying log-ratio transformations to compositional data. According to \cite{Aitchison1983}, this is likely to be inadequate and in \cite{Filzmoser2007}, a more appropriate method for performing PCA on compositional data is presented.
 
-The normality of compositional data is defined in \cite{PawlowskyGlahn2007}. It is stated that compositional data must first be transformed using isometric log-ratio transformation before the tests for normality can be applied. \cite{Jonsson2005a} violates this requirement by applying the Shapiro-Wilk test for normality to untransformed compositional data.
+The normality of compositional data is defined in \cite{PawlowskyGlahn2007}. It is stated that compositional data must first be transformed using isometric log-ratio transformation before the tests for normality can be applied. In \cite{Jonsson2005a} the authors violate this requirement by applying the Shapiro-Wilk test for normality to untransformed compositional data.
 
 The Kruskal-Wallis test is used in \cite{Jonsson2005a} to analyze compositional data. The test is used to evaluate the difference between three organization levels. The Kruskal-Wallis test assumes that variables within each sample are independent \cite{Kruskal1952a}. However, values within compositional data vectors are not independent (as described in Section \ref{coda}). Hence, we claim the Kruskal-Wallis test to be somewhat misused in \cite{Jonsson2005a}.

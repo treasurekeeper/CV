@@ -5,7 +5,7 @@ This section discusses the results of the systematic review and evaluation of EC
 % state
 CV has been applied in various areas, but most frequently in requirements prioritization and release planning, and quite often also as part of research methodologies.
 A large part of the studies have been conducted in Sweden, at Ericsson AB.% which is currently the world's largest telecommunication equipment vendor.
-One can see a slight increase in the interest in CV. During the last five years there have been more studies that use CV than between, say, year 2000--2005.
+One can see a slight increase in the interest in CV. During the last five years there have been more studies that use CV than between, say, 2000--2005.
 
 % QE
 Overall, studies that use CV or analyze the results of CV have a high quality in terms of correctness of research process and study realism.
@@ -13,10 +13,10 @@ However, very few studies present prioritization of more than 30 items and the a
 
 \subsection{Implications for Practitioners}
 The results of this study provide decision support for industry practitioners.
-We believe that a collection of state of the practice studies help the adoption of CV prioritization method. (Top studies are summarized in Table~\ref{tab:Top-ranked}.)
+We believe that a collection of state of the practice studies help the adoption of CV prioritization method. (The top studies are summarized in Table~\ref{tab:Top-ranked}.)
 In addition, a set of CV analysis methods enables comprehensive understanding of the prioritization results. 
 (The analysis methods are presented in Table~\ref{goals_for_methods}.)
-One of the most common goals of CV analysis is to display of the prioritization results and, thus, to show the difference between several prioritization perspectives.
+One of the most common goals of CV analysis is to display the prioritization results and, thus, to show the difference between several prioritization perspectives.
 
 Additionally, we present ECV---a novel method for CV analysis.
 Prioritization often results in the assignment of similar priorities to several prioritization items.
@@ -29,7 +29,7 @@ ECV identifies prioritization items with similar priority and tests whether thes
 In this case, ECV can be used in software release planning.
 For example, let us suppose that a set of software requirements are prioritized with regard to the implementation costs.
 First of all, ECV can then detect items with equal cost.
-Second, the equal items can be freely swapped between the releases.
+Second, the equal items can be freely interchanged between the releases.
 Finally, the decision to allocate a requirement to a particular release can be made based on another criteria, such as risk or business value.
 
 ECV has been successfully applied on a considerable amount of CV data and, additionally, has also detected equal items in different groups of HCV hierarchies.
@@ -63,7 +63,7 @@ The principal implications for the academia are mainly the following:
 \item All systematic literature reviews should include snowball sampling.
 \item Researchers can improve their statistical analysis of CV results using compositional data analysis methods collected and developed by this study.
 \item When CV or any other ratio scale prioritization method is taught, compositional data analysis should also be presented as part of the solution.
-\end{enumerate}
+\end{enumerate}	
 
 % validity
 \subsection{Validity Threats}
@@ -72,15 +72,16 @@ The validity of the systematic review is mainly limited by the chosen databases,
 To mitigate the threats we use the most popular databases in the field of software engineering.
 In the beginning of the systematic review a review protocol was developed, peer-reviewed, and revised.
 Search strategy was validated against a set of previously known papers obtained from other researchers.
+
 One of many terms used to name cumulative voting is `\$100 method'.
-We were not able to search for this term because non of the chosen databases support search for special characters like `\$' and the search string `100 method' yields hundreds of thousands of results.
+We were not able to search for this term because non of the chosen databases support search for special characters like `\$' and the search string `100 method' yields too many hits.
 To increase the likelihood of discovering relevant studies snowball sampling was extensively used.
 
 To increase the validity of study selection, all included studies and 20 randomly selected excluded studies were examined by two researchers.
 There were no disagreement on the inclusion\slash exclusion of the studies.
 
 The large number of studies identified by snowball sampling (15 out of 40 studies) may be caused by faulty design or by faulty execution of the search in the databases.
-There are several reasons why the studies revealed by snowball sampling are not revealed by the search in databases. Reason for each study is given in Table~\ref{snowPapers}.
+There are several reasons why the studies revealed by snowball sampling are not revealed by the search in databases. (Reason for each study is given in Table~\ref{snowPapers}.)
 Based on these reasons we argue that snowball sampling does not indicate any problems with the design of the search in the databases.
 
 Four studies were not found because they were not available through databases used in this systematic review. Out of them one is a master thesis, two are conference publications and one is a publication in the area of forestry.
@@ -95,7 +96,7 @@ The agreement for the data extraction results was 0.86 and the agreement for the
 
 There are two main validity threats with ECV itself.
 First, ECV may not detect prioritization items with equal priority.
-Second, ECV may produce a false positive result. There may be a real difference between items that ECV claims as being equal.
+Second, ECV may produce a false positive result, i.e.\ there may be a real difference between items that ECV claims as being equal.
 
 To mitigate the first threat ECV was applied on artificially created test data with and without items with similar priority.
 ECV worked correctly in both cases.

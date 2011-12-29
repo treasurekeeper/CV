@@ -1,33 +1,31 @@
-
-
 \subsection{Cumulative Voting\label{app:CV}}
 
 CV is a prioritization method for prioritizing a list of items \cite{Leffingwell1999}.
-CV has many synonyms in literature: hundred dollar method, hundred
-dollar test, hundred point method, 100\$ dollar method, 100\$ dollar
-test, 100\$ point method.
+CV has many synonyms in literature: hundred (100) dollar (\$) method\slash test and hundred (100) point method.
 Before being applied in software engineering CV was used for
-political elections \cite{Engstrom1999} and corporate governance
-\cite{Bhagat1984}. CV has also been applied in e.g.\ decision making in forestry
-\cite{Hiltunen2008}, voting in social networks \cite{Boldi:2009:VSN:1645953.1646052} and in computer algorithms for consensus clustering \cite{Ayad2008b} (as a method for combining the results of different clustering algorithms).
+political elections \cite{Engstrom1999} and corporate governance \cite{Bhagat1984}. 
+CV has also been applied in e.g.\ decision making in forestry \cite{Hiltunen2008}, voting in social 
+networks \cite{Boldi:2009:VSN:1645953.1646052} and in computer algorithms for consensus 
+clustering \cite{Ayad2008b} (as a method for combining the results of different clustering algorithms).
 
 In CV a stakeholder is given 100 points,
 imaginary dollars or units of percentages that can be spent on the prioritization
 items. In the simplest case, the stakeholder can spend any amount of points on any number
 of items as long as the total amount adds up to 100. The more points
 assigned to an item, the higher the priority of the item (and implicitly, 
-the lower priority to the other items). The
-stakeholder may spend all the points on just one item or distribute
-them among all or some of the items. Once again, this is the simplest case; other variants exist, which we will see next.
+the lower priority to the other items). 
+The stakeholder may spend all points on just one item or distribute
+them among all or some of the items. Once again, this is the simplest case; 
+other variants exist, which we will see next.
 
 Often prioritization is done by more than one stakeholder. The final
 priority of an item can be calculated by adding up the points each stakeholder
 has spent on it. Sometimes the vote of some stakeholders may be more
 important than the votes of others. For example, a manager may be
-more influential and shareholders may have different
+more influential or shareholders may have different
 amount of shares. In such a case the priorities of each stakeholder
-may be multiplied by an individual coefficient or a different amount of 
-points for prioritization.
+may be multiplied by an individual coefficient or a stakeholder may be given a 
+more points to perform the prioritization.
 
 Worth mentioning in this context is that it is advisable to randomize 
 the order of items in a prioritization list. This is necessary in order 
@@ -42,22 +40,23 @@ all prioritization items are evaluated simultaneously \cite{Ahl2005}.
 
 There are, however, a few problems with CV. First of all, it cannot be repeated for the
 same stakeholders and prioritization items due to stakeholder bias
-\cite{Leffingwell1999} (c.f.\ Section~\ref{hcv}). Secondly, CV becomes more difficult if the number of prioritization items increases \cite{Berander2009a}.
+\cite{Leffingwell1999} (c.f.\ Section~\ref{hcv}). Secondly, CV 
+becomes more difficult to use when the number of prioritization items 
+increases \cite{Berander2009a}.
 
 \subsubsection{Example of Cumulative Voting with Several Stakeholders}
 
-Let us give an example of CV with several stakeholders. Suppose Robin,
+Let us next give an example of CV with several stakeholders. Suppose Robin,
 Alice, and John are three friends who want to buy some beverages in
 a store. They have different preferences but do not want to buy too
 many drinks. Therefore, they decide to use CV to decide what to buy.
 Each of the friends distributes 100 points between four items: milk,
 tea, coffee, and juice (Step 1 in Figure~\ref{fig:Example-of-Cumulative}).
-Each of them will spend a different amount of money on the purchase,
+In this case each of them will spend a different amount of money on the purchase,
 hence, their priorities are multiplied by different coefficients
 (Step 2 and the stakeholder importance coefficient in Figure~\ref{fig:Example-of-Cumulative}).
 The final beverage priorities are calculated by summing up the weighted priorities
 of stakeholders (Step 3 in Figure~\ref{fig:Example-of-Cumulative}).
-
 
 \begin{figure}
 	\center
@@ -69,7 +68,7 @@ of stakeholders (Step 3 in Figure~\ref{fig:Example-of-Cumulative}).
 
 Prioritization using CV may be biased if a stakeholder knows the preferences
 of other stakeholders. She may manipulate the results by spending more
-points on items that are important to her but not the other stakeholders.
+points on items that are important to her but not to the other stakeholders.
 On the one hand, stakeholder bias makes it unreasonable to repeat CV
 with the same prioritization items and stakeholders. On the other hand,
 this property of CV may be useful in giving more power to important
@@ -88,8 +87,7 @@ values. This is likely caused by lack of objective judgement criteria. Either
 way it seems to be a problem not acknowledged by many since all prioritization is largely
 based on expert opinion.
 
-
-\subsubsection{Scalability of Cumulative Voting, Hierarchical Cumulative Voting\label{hcv}}
+\subsubsection{Scalability of Cumulative Voting---Hierarchical Cumulative Voting\label{hcv}}
 
 The standard CV approach has a low scalability. If the number of prioritization items
 is high, stakeholders may lose sight of the bigger picture and assign priorities to a
@@ -97,7 +95,8 @@ limited number of items. One, unsophisticated, solution to the problem is to pro
 more points for prioritization (1,000 or 10,000 instead of 100); however, one could take another approach. 
 
 When the number of prioritization items is high they can usually 
-be grouped hierarchically by forming a tree structure (Figure~\ref{fig:Prionitization-Item-Hierarchy}) and, thus, parent-child dependencies will exist between many items.
+be grouped hierarchically by forming a tree structure (Figure~\ref{fig:Prionitization-Item-Hierarchy}) 
+and, thus, parent-child dependencies will exist between many items.
 
 \begin{figure}
 	\center
@@ -143,10 +142,10 @@ steps (Steps 4--5 are optional):
 one high and several low level item groups. Each low level item group
 is child to exactly one high level item. And each high level item
 has one low level item group. One low level item may belong to several
-item groups. Even if part of the items are not logically connected they
+item groups. Even if parts of the items are not logically connected they
 can be grouped separately and assigned a fake parent item, e.g.\ `misc.
-items'. HCV does not, as far as we know, provide any directions on creating a requirements
-hierarchy.
+items'. HCV does not, as far as we know, provide any instructions for 
+creating a requirements hierarchy.
 
 \item Each high and low level item group is prioritized separately using
 CV. The stakeholder may prioritize all item groups at once or one by one.
@@ -168,7 +167,7 @@ the sum of all low level priorities of each item in all groups.
 \item The final priority of each low level item is calculated by multiplying
 it with the priority of its parent high level item.
 
-\item Then apply the compensation factor to all low level requirements as described
+\item Then one applies the compensation factor to all low level requirements as described
 in Section~\ref{sub:Compensation-factor}.
 
 \item Finally, when multiple stakeholders have performed the prioritization, priorities
@@ -182,17 +181,16 @@ requirements participate in the standard HCV prioritization process and
 are prioritized two or more times with each group they belong to.
 At the end of the prioritization they receive several priority values.
 These values must be summed together to form the final priority of the item.
-(This is done because the item adds value to both parts of hierarchy.)
+(This is done because the item adds value to both parts of the hierarchy.)
 
 \begin{figure}
 	\center
 \includegraphics[scale=0.5]{\string"fig/hcv hierarchy\string".png}
-\caption{\label{fig:Overlapping-Prioritization-Item}Overlapping prioritization
-item hierarchy example.}
+\caption{\label{fig:Overlapping-Prioritization-Item}Overlapping prioritization item hierarchy example.}
 \end{figure}
 
 \subsubsection{Example of Hierarchical Cumulative Voting}
-In this section we will give a short example of HCV. Suppose six requirements
+Suppose six requirements
 for a mobile phone operating system need to be prioritized: `reminder
 alarm', `specify repeated event', `hide contact', `add picture to phonebook',
 `search contact', `make video call'. Three high level requirements can
