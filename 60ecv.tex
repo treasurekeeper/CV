@@ -14,7 +14,7 @@ Another approach is to find items that are equal.
 The first approach uses statistical tests to evaluate differences between e.g.\ two population means, in order to determine that two items are different.
 Populations in this case consist of priorities assigned by all stakeholders to a particular prioritization item.
 The number of stakeholders that perform the prioritization is frequently small.
-Hence, the size of the sample is very often too small for statistical tests to detect a significant difference and the tests, thus, identify too many equal items to make any useful conclusions.
+Hence, the size of the sample is very often too small for statistical tests to detect a significant difference in the tests, thus, identify too many equal items to make any useful conclusions.
 
 ECV, in contrast, uses the second approach.
 It finds items that are similar and the rest of the items are considered different.
@@ -33,38 +33,39 @@ ECV performs the following operations for the priorities of each of the two prio
 \item Form groups of equal prioritization items.
 \end{enumerate}
 
-Since CV results are compositional data, zeroes in $A$ must be replaced with other values.
+Since CV results are compositional data, zeroes in $A$ are replaced with other values.
 This is done using the multiplicative replacement strategy which is described in Section~\ref{Problem-of-Zeroes}.
 Next, two columns are extracted from matrix $A$ to create the new matrix $B$:
 
 \begin{equation}
-	B=\left[a_{*,k}a_{*,l}\right]\label{eq:b}
+	B=\left[a_{*,k}a_{*,l}\right],\label{eq:b}
 \end{equation}
 	
-where $a$ is an element of matrix $A$, and $k$ and $l$ are the columns that represent items that are tested for equality.
+where $a$ is an element of matrix $A$, and $k$ and $l$ are the columns that represent items that are tested for equality, "$*$" denotes all rows of corresponding column.
 
 The $ilr$ transformation is then applied to each row of the matrix $B$ and the new vector $C$ is obtained. The equation for calculating elements of $C$ using $ilr$ transformation is:
 
 \begin{equation}
-	c_{i}=ilr(b_{i1},b_{i2})=\sqrt{0.5}\log(b_{i1}/b_{i2})\label{eq:c}
+	c_{i}=ilr(b_{i1},b_{i2})=\sqrt{0.5}\log(b_{i1}/b_{i2}),\label{eq:c}
 \end{equation}
 
 where $c_{i}$ is the $i^{th}$element of $C$ and $b_{i1}$ and $b_{i2}$ are the first and second elements in the $i^{th}$ row of $B$.
-Each value $c_{i}$ represents a ratio between $k$ and $l$.
-The mean of the values of $C$ can be interpreted as an average ratio between the items that expresses the difference between the items.
+Each value $c_{i}$ represents a log-ratio between $k$ and $l$.
+The mean of the values of $C$ can be interpreted as an average log-ratio between the items that expresses the difference between the items.
 
 After the data is transformed into log-ratios statistical test can be applied.
 The purpose of the test is to determine what the probability is of the relative difference between two prioritization items $k$ and $l$ being less than 25\%.
-This means determining the probability of the ratio $k/l$ between the items $k$ and $l$ as being in the range of $\frac{3}{4}$ to $\frac{4}{3}$. Or in terms of log-ratios it means determining the probability of $ilr(k,l)$ being between $ilr(3,4)$ and $ilr(4,3)$.
+This means determining the probability of the log-ratio $k/l$ between the items $k$ and $l$ as being in the range of $\frac{3}{4}$ to $\frac{4}{3}$.
+Or in terms of log-ratios it means determining the probability of $ilr(l, m)$ being between $ilr(3,4)$ and $ilr(4,3)$, where l is value from column k and m is value from column l.
 Hence, the objective of the test is to determine the probability of the sample mean (i.e.\ mean value of $C$) laying between the two values.
 
 The probability that the mean takes a particular value can be expressed in the form of a cumulative distribution function.
 The probability of the mean being between two values $a$ and $b$ (where $a$ is smaller than $b$) can be determined by subtracting the probability of the mean being smaller than $a$ from probability of the mean being smaller than $b$.
 
-However, CV result data may or may not be normally distributed.
+However, CV result data may or may not have multivariate normal distribution.
 If the data is normally distributed a Student's $t$ distribution function can be used.
 
-Otherwise a non-parametric estimation of the distribution function is needed.
+Otherwise a non-parametric estimation of the distribution function could be performed.
 In our case, the CV result data obtained from the primary studies identified by the systematic review, were tested for normality using the Anderson-Darling test.
 The tests we performed indicated, quite strongly, that in most of the prioritization cases the data is not normally distributed.
 Hence, our recommendation is that, in general, a non-parametric approach should be used to determine the probability density function, and one such, common, approach would be to use the kernel density estimation.
@@ -73,7 +74,7 @@ Hence, our recommendation is that, in general, a non-parametric approach should 
 To determine the probability of $\bar{x}$ being between $a$ and $b$ the following equation is used:
 
 \begin{equation}
-	p=P(b)-P(a)\label{eq:mean-between-a-b}
+	p=P(b)-P(a)\label{eq:mean-between-a-b},
 \end{equation}
 
 where $P$ is the cumulative distribution function obtained by applying kernel density estimation on $ilr$-transformed priority values denoted by vector $C$. Variable $a$ is equal to $ilr(3,4)$ and $b$ is equal to $ilr(4,3)$. (A graphical interpretation of Equation~(\ref{eq:mean-between-a-b}) is presented in Figure~\ref{fig:Probability-p-that}.)
@@ -84,7 +85,7 @@ The area that is denoted by letter $p$ represents the probability computed by th
 \includegraphics[scale=0.2]{fig/p}
 \caption{
 	\label{fig:Probability-p-that}
-	Cumulative distribution function of the ratio $k/l$ between the items $k$ and $l$ (area $p$ denotes probability that $k/l$ is between $\frac{3}{4}$ and $\frac{4}{3}$.)
+	Cumulative distribution function of the log-ratio $l/m$ between the items $l$ and $m$ (area $p$ denotes probability that $l/m$ is between $\frac{3}{4}$ and $\frac{4}{3}$.)
 }
 \end{figure}
 
@@ -114,7 +115,7 @@ i4 & equal & - & - & equal\tabularnewline
 \end{table}
 
 \subsection{Grouping Prioritization Items}
-When equal items are determined they must be divided into groups of equal items. Division must be performed in such a way that each two items in a group are equal. The test for equality of the items described in Section~\ref{Testing-Equality-of} is not transitive. Hence, if prioritization item $A$ is equal to $B$ and $B$ is equal to $C$ then it does not automatically imply that $A$ is equal to $C$. Therefore, there may be several ways to group the equal items. The two possible division criteria that we have considered in this study are:
+When equal items are determined they can be divided into groups of equal items. Division is performed in such a way that each two items in a group are equal. The test for equality of the items described in Section~\ref{Testing-Equality-of} is not transitive. Hence, if prioritization item $A$ is equal to $B$ and $B$ is equal to $C$ then it does not automatically imply that $A$ is equal to $C$. Therefore, there may be several ways to group the equal items. The two possible division criteria that we have considered in this study are:
 
 \begin{enumerate}
 \item Maximize the number of items that have a group.

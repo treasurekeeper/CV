@@ -1,7 +1,5 @@
-
-%% This is file `elsarticle-template-1a-num.tex',
 %%
-%% Copyright 2009 Elsevier Ltd
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
 %%
 %% This file is part of the 'Elsarticle Bundle'.
 %% ---------------------------------------------
@@ -16,13 +14,17 @@
 %% The list of all files belonging to the 'Elsarticle Bundle' is
 %% given in the file `manifest.txt'.
 %%
+
 %% Template article for Elsevier's document class `elsarticle'
 %% with numbered style bibliographic references
+%% SP 2008/03/01
 %%
-%% $Id: elsarticle-template-1a-num.tex 151 2009-10-08 05:18:25Z rishi $
-%% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1a-num.tex $
 %%
-\documentclass[preprint,11pt]{elsarticle}
+%%
+%% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%%
+%%
+\documentclass[preprint,12pt]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
@@ -40,7 +42,7 @@
 %% use the graphics package for simple commands
 %% \usepackage{graphics}
 %% or use the graphicx package for more complicated commands
-\usepackage{graphicx}
+%% \usepackage{graphicx}
 %% or use the epsfig package if you prefer to use the old commands
 %% \usepackage{epsfig}
 
@@ -52,7 +54,7 @@
 %% The lineno packages adds line numbers. Start line numbering with
 %% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
 %% for the whole article with \linenumbers after \end{frontmatter}.
-\usepackage{lineno}
+%% \usepackage{lineno}
 
 %% natbib.sty is loaded by default. However, natbib options can be
 %% provided with \biboptions{...} command. Following options are
@@ -75,28 +77,59 @@
 
 % \biboptions{}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 
-%%\usepackage[pdftex]{graphicx}
-
-\usepackage{array}
-\usepackage{longtable}
-\usepackage{rotating}
-\usepackage{multirow}
-\usepackage{chngpage}
-
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{capt-of}
-\usepackage{url} 
-\usepackage{appendix}
-
-\journal{Information and Software Technology}
+\journal{Nuclear Physics B}
 
 \begin{document}
 
-\input{03frontmatter}
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author{}
+
+\address{}
+
+\begin{abstract}
+%% Text of abstract
+
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
 
 %%
 %% Start line numbering here if you want
@@ -104,7 +137,8 @@
 % \linenumbers
 
 %% main text
-\input{05content}
+\section{}
+\label{}
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
@@ -117,16 +151,18 @@
 %%
 %% Following citation commands can be used in the body text:
 %% Usage of \cite is as follows:
-%%   \cite{key}          ==>>  [#]
-%%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
-%%   \citet{key}         ==>>  Author [#]
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
 
 %% References with bibTeX database:
 
+ \bibliographystyle{elsarticle-num}
+\bibliography{<your-bib-database>}
 
 %% Authors are advised to submit their bibtex database files. They are
 %% requested to list a bibtex style file in the manuscript if they do
-%% not want to use model1a-num-names.bst.
+%% not want to use elsarticle-num.bst.
 
 %% References without bibTeX database:
 
@@ -144,4 +180,4 @@
 \end{document}
 
 %%
-%% End of file `elsarticle-template-1a-num.tex'.
+%% End of file `elsarticle-template-num.tex'.

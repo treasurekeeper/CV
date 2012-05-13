@@ -8,7 +8,7 @@ propose the use of compositional data analysis for the statistical analysis of C
 A compositional data item is a vector ($x$) of positive components with a constant sum $k$:
 
 \begin{equation}
-x=(X_{1};\, X_{2};\,\ldots;\, X_{n})\, where\, x_{i}\geq0\, and\,\sum_{j=1}^{n}x_{j}=k
+x=(X_{1};\, X_{2};\,\ldots;\, X_{n})\, where\, x_{i}\geq0\, and\,\sum_{j=1}^{n}x_{j}=k.
 \label{eq:compositional-data}
 \end{equation}
 
@@ -29,40 +29,40 @@ priority. This also holds true the other way around i.e.\ if the item is put in 
 with low priority items its priority will be higher.
 
 % section about all the limitations, errors
-Compositional data analysis has, however, serious limitations.
-Ordinary unconstrained variables are free to take any positive or negative
-values, whereas, compositional data values can only be positive and
-have a constrained maximum value. Moreover, components of compositional
-data vectors are not independent from each other. The fact that an
-item is assigned 70 priority points means that the next item can take
-only values between 0 and 30. Hence, there is a negative correlation
-between the items.
+When doing analysis of compositional data one must take into account that compositional data special type of data
+and should be analysed differently than ordinary data.
+%Compositional data analysis has, however, serious limitations.
+Ordinary unconstrained variables are free to take any positive or negative values,
+whereas, compositional data values can only be positive and have a constrained maximum value.
+Moreover, components of compositional data vectors are not independent from each other.
+The fact that an item is assigned 70 priority points means that the next item can take only values between 0 and 30.
+Hence, there is a negative correlation between the items.
 
-Standard parametric statistical tests require that data vectors have
-multivariate normal distribution. Vector $X=(X_{1}, X_{2}, \ldots, X_{n})$
+Standard parametric statistical tests require that data vectors have multivariate normal distribution.
+Vector $X=(X_{1}, X_{2}, \ldots, X_{n})$
 is considered to have multivariate normal distribution if any linear
 combination of its parts is normally distributed, and linear combination
 is defined by:
 
 \begin{equation}
-	Y=a_{1}X_{1}+a_{2}X_{2}+\ldots+aX_{n}
+	Y=a_{1}X_{1}+a_{2}X_{2}+\ldots+aX_{n},
 \end{equation}
 
 where $Y$ is the product of lineal combination and $a_{i}$ is any
 real number. Now, since the sum of priorities assigned in CV must add up
 to 100 (or any other constant number) at least one linear combination
-of $X$ is not normally distributed because it must always add up to
+of $X$ is not normally distributed because it always adds up to
 100:
 
 \begin{equation}
-	Y=1\cdot X_{1}+1\cdot X_{2}+\ldots+1\cdot X_{n}=100
+	Y=1\cdot X_{1}+1\cdot X_{2}+\ldots+1\cdot X_{n}=100.
 \end{equation}
 
-In our opinion, the above indicates, quite strongly, that CV results do not follow a multivariate normal distribution and, hence, it follows that they should be analyzed using non-parametric statistical tests \citep{Pawlowsky-Glahn2006}.
+In our opinion, the above indicates, quite strongly, that CV results do not follow a multivariate normal distribution and, hence, it follows that they should be analysed using non-parametric statistical tests \citep{Pawlowsky-Glahn2006}.
 
 \subsubsection{\label{Problem-of-Zeroes}Problem of Zeroes}
-Compositional data analysis requires that ratios between any components in a vector can be
-computed. But computing a ratio with a zero value is, in this case, meaningless. This is
+Compositional data analysis requires that log-ratios between any components in a vector can be
+computed. But computing a log-ratio with a zero value is, in this case, meaningless. This is
 a problem since CV allows stakeholders to assign zero priorities
 to some prioritization items (we would even strongly argue that this is very common). 
 
@@ -73,7 +73,7 @@ its value is very low. We, as others have before us, conjecture that zeroes in C
 rounded because the priority of an item is a completely abstract notion
 and the instrument for measuring priority is human judgement \citep{Chatzipetrou2010}.
 
-Before compositional data analysis can be applied to CV results, we must first remove
+Before compositional data analysis can be applied to CV results, we should first remove
 zeroes in the data. One approach can be to forbid stakeholders
 to assign zero priorities. This approach is used in e.g.\ \citep{Pettersson2008}.
 But this can add some unnecessary complexity to the prioritization
@@ -95,13 +95,13 @@ More is subtracted from components with higher values than from components with 
 values (and the value of the imputed $\delta_{j}$ is arbitrary).
 
 \subsubsection{\label{Isometric-Logratio-Transformation}Isometric log-ratio transformation}
-In order to apply standard statistical methods to compositional data it must be transformed to remove the inherent correlation of the values.
+In order to apply standard statistical methods to compositional data it should be transformed to remove the inherent correlation of the values.
 Compositional data analysis proposes special transformations that change the compositional data values to unconstrained real values.
 One such transformation is isometric log-ratio ($ilr$) transformation (as proposed by \citep{Pawlowsky-Glahn2006,Filzmoser2007a}):
 
 \begin{eqnarray}
 z & = & \left(z_{1},\,\ldots,\, z_{D-1}\right),\nonumber \\
-z_{i} & = & \sqrt{\frac{i}{i+1}}log\frac{\sqrt[i]{\prod_{j=1}^{i}x_{j}}}{x_{i+1}}for\, i=1,\ldots,D-1\label{eq:ilr}
+z_{i} & = & \sqrt{\frac{i}{i+1}}log\frac{\sqrt[i]{\prod_{j=1}^{i}x_{j}}}{x_{i+1}}for\, i=1,\ldots,D-1,\label{eq:ilr}
 \end{eqnarray}
 
 where $x$ is the vector that is being transformed and $z$ is the vector that is created. It should be noted that $z$ is shorter than $x$ by one element.

@@ -96,12 +96,14 @@ ECV \tabularnewline
 \end{tabular}
 \end{table}
 
-\subsubsection{\label{codaProblems}Problems with Compositional Data Analysis in Primary Studies}
+%\subsubsection{\label{codaProblems}Problems with Compositional Data Analysis in Primary Studies}
+\subsubsection{\label{codaProblems}Problems with Data Analysis in Primary Studies}
 
-A few primary studies, as revealed by the systematic review, have problems with the analysis of compositional data.
+%A few primary studies, as revealed by the systematic review, have problems with the analysis of compositional data.
+A few primary studies, as revealed by the systematic review, have problems with the data analysis.
 
 In \citep{Wohlin2006,Pettersson2008} standard PCA is performed without applying log-ratio transformations to compositional data. According to \citep{Aitchison1983}, this is likely to be inadequate and in \citep{Filzmoser2007}, a more appropriate method for performing PCA of compositional data is shown.
 
-The normality of compositional data is defined in \citep{PawlowskyGlahn2007}. It is stated that compositional data must first be transformed using isometric log-ratio transformation before the tests for normality can be applied. \citep{Jonsson2005a} violates this requirement by applying the Shapiro-Wilk test for normality to untransformed compositional data.
+The normality of compositional data is defined in \citep{PawlowskyGlahn2007}. It is stated that it is convenient to transform compositional data using isometric log-ratio transformation before the tests for normality can be applied. \citep{Jonsson2005a} violates this requirement by applying the Shapiro-Wilk test for normality to untransformed compositional data.
 
 The Kruskal-Wallis test is used in \citep{Jonsson2005a} to analyze compositional data. The test is used to evaluate the difference between three organization levels. The Kruskal-Wallis test assumes that variables within each sample are independent \citep{Kruskal1952a}. However, values within compositional data vectors are not independent (as described in Section \ref{coda}). Hence, we claim the Kruskal-Wallis test to be somewhat misused in \citep{Jonsson2005a}.
