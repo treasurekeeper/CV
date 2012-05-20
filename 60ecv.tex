@@ -55,9 +55,8 @@ The mean of the values of $C$ can be interpreted as an average log-ratio between
 
 After the data is transformed into log-ratios statistical test can be applied.
 The purpose of the test is to determine what the probability is of the relative difference between two prioritization items $k$ and $l$ being less than 25\%.
-This means determining the probability of the log-ratio $k/l$ between the items $k$ and $l$ as being in the range of $\frac{3}{4}$ to $\frac{4}{3}$.
-Or in terms of log-ratios it means determining the probability of $ilr(l, m)$ being between $ilr(3,4)$ and $ilr(4,3)$, where l is value from column k and m is value from column l.
-Hence, the objective of the test is to determine the probability of the sample mean (i.e.\ mean value of $C$) laying between the two values.
+Or in terms of log-ratios it means determining the probability of $c_{i}$ (obtained from priorities assigned to $k$ and $l$) as being in the range of $\frac{3}{4}$ to $\frac{4}{3}$.
+Hence, the objective of the test is to determine the probability of the sample mean (i.e.\ mean value of the items of $C$) laying between the two values.
 
 The probability that the mean takes a particular value can be expressed in the form of a cumulative distribution function.
 The probability of the mean being between two values $a$ and $b$ (where $a$ is smaller than $b$) can be determined by subtracting the probability of the mean being smaller than $a$ from probability of the mean being smaller than $b$.
@@ -67,6 +66,9 @@ If the data is normally distributed a Student's $t$ distribution function can be
 
 Otherwise a non-parametric estimation of the distribution function could be performed.
 In our case, the CV result data obtained from the primary studies identified by the systematic review, were tested for normality using the Anderson-Darling test.
+Before applying the test the data was transformed using methods of compositional data analysis.
+To compute the test we used method $adtestWrapper$ from $R$ language library $robCompositions$.
+
 The tests we performed indicated, quite strongly, that in most of the prioritization cases the data is not normally distributed.
 Hence, our recommendation is that, in general, a non-parametric approach should be used to determine the probability density function, and one such, common, approach would be to use the kernel density estimation.
 (In our implementation of ECV in the $R$ programming language, kernel density estimation is performed using the package $ks$.)
@@ -85,7 +87,7 @@ The area that is denoted by letter $p$ represents the probability computed by th
 \includegraphics[scale=0.2]{fig/p}
 \caption{
 	\label{fig:Probability-p-that}
-	Cumulative distribution function of the log-ratio $l/m$ between the items $l$ and $m$ (area $p$ denotes probability that $l/m$ is between $\frac{3}{4}$ and $\frac{4}{3}$.)
+	Cumulative distribution function of the log-ratio $c_{i}$ between the items $k$ and $l$ (area $p$ denotes probability that $c_{i}$ is between $\frac{3}{4}$ and $\frac{4}{3}$.)
 }
 \end{figure}
 
