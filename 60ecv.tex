@@ -1,9 +1,12 @@
 \section{Equality of Cumulative Votes \label{ecv}}
-In the previous section we described the execution of the systematic literature review. In order to perform a more thorough analysis later we here present the design of ECV before presenting the results of the systematic literature review. For the results of the evaluation of ECV please see Section~\ref{rq3} (ECV is implemented in the $R$ programming language \citep{Ihaka1996} and the code can be found at \citep{Rinkevics2011}.)
+In the previous section we described the execution of the systematic literature review. In order to perform a more thorough analysis later we here present the design of ECV before presenting the results of the systematic literature review. For the results of the evaluation of ECV please see Section~\ref{rq3} (ECV is implemented in the $R$ programming language \cite{Ihaka1996} and the code can be found at \cite{Rinkevics2011}.)
 
-In CV stakeholders may assign similar or equal values to several prioritization items. As a result the difference between the items is small. The variation in priorities is caused not only by the difference between prioritization items but also by human error and lack of information for decision making. For instance, people tend to simplify the task of prioritization by assigning rounded values to items or giving equal values to several items \citep{Groves2009}.
+In CV stakeholders may assign similar or equal values to several prioritization items. As a result the difference between the items is small. The variation in priorities is caused not only by the difference between prioritization items but also by human error and lack of information. For instance, people tend to simplify the task of prioritization by assigning rounded values to items or giving equal values to several items \cite{Groves2009}.
 
-During prioritization it may be beneficial to know which items are equal. A common example is software release planning where requirements are distributed among several product releases. If two or more requirements are considered equal they can be freely interchanged between the releases, and other criteria, such as cost or effort, may be used as sole indicators for planning that particular release.
+During prioritization it may be beneficial to know which items are equal. A common example is software release planning where requirements are distributed among several product releases.
+%If two or more requirements are considered equal they can be freely interchanged between the releases, and other criteria, such as cost or effort, may be used as sole indicators for planning that particular release.
+If two or more requirements are considered equal they can be interchanged between the releases regardless of their priority.
+That allows other criteria, such as cost or effort, to be used as sole indicators for planning that particular release.
 
 % testing equality
 \subsection{\label{Testing-Equality-of}Testing Equality of Two Items}
@@ -11,8 +14,8 @@ There are two ways to determine which prioritization items have similar priority
 One approach is to find items that are different and consider other items as equal.
 Another approach is to find items that are equal.
 
-The first approach uses statistical tests to evaluate differences between e.g.\ two population means, in order to determine that two items are different.
-Populations in this case consist of priorities assigned by all stakeholders to a particular prioritization item.
+The first approach uses statistical tests to evaluate differences between e.g.\ two sample means, in order to determine that two items are different.
+Samples in this case consist of priorities assigned by all stakeholders to a particular prioritization item.
 The number of stakeholders that perform the prioritization is frequently small.
 Hence, the size of the sample is very often too small for statistical tests to detect a significant difference in the tests, thus, identify too many equal items to make any useful conclusions.
 
@@ -49,7 +52,7 @@ The $ilr$ transformation is then applied to each row of the matrix $B$ and the n
 	c_{i}=ilr(b_{i1},b_{i2})=\sqrt{0.5}\log(b_{i1}/b_{i2}),\label{eq:c}
 \end{equation}
 
-where $c_{i}$ is the $i^{th}$element of $C$ and $b_{i1}$ and $b_{i2}$ are the first and second elements in the $i^{th}$ row of $B$.
+where $c_{i}$ is the $i^{th}$ element of $C$ and $b_{i1}$ and $b_{i2}$ are the first and second elements in the $i^{th}$ row of $B$.
 Each value $c_{i}$ represents a log-ratio between values of columns $k$ and $l$.
 The mean of the values of $C$ can be interpreted as an average log-ratio between the items that expresses the difference between the items.
 
@@ -62,7 +65,7 @@ The probability that the mean takes a particular value can be expressed in the f
 The probability of the mean being between two values $a$ and $b$ (where $a$ is smaller than $b$) can be determined by subtracting the probability of the mean being smaller than $a$ from probability of the mean being smaller than $b$.
 
 However, CV result data may or may not have multivariate normal distribution.
-If the data is normally distributed a Student's $t$ distribution function can be used.
+If the data is normally distributed a Student's $t$-test can be used; otherwise, a non-parametric estimation of the distribution function is needed.
 
 Otherwise a non-parametric estimation of the distribution function could be performed.
 In our case, the CV result data obtained from the primary studies identified by the systematic review, were tested for normality using the Anderson-Darling test.
@@ -98,7 +101,7 @@ Please see Table~\ref{tab:ECVexample} for an example.
 \begin{table}
 	\scriptsize
 	\centering
-\caption{Example of equality table}
+\caption{Example of an equality table.}
 
 \label{tab:ECVexample}
 \begin{tabular}{|c|c|c|c|c|}

@@ -7,39 +7,39 @@ This section presents definitions and places this study in a context. In the com
 Some of the most popular prioritization methods are the analytical hierarchy
 process (AHP), cumulative voting (CV), ranking, numerical assignment,
 top-ten, the planning game, minimal spanning tree, bubble sort and binary
-search tree \citep{Berander2005,Karlsson1998}. Ranking and numerical
+search tree \cite{Berander2005,Karlsson1998}. Ranking and numerical
 assignment methods perform prioritization on an ordinal scale. AHP and CV
 are, on the one hand, considered to be harder to use and also more time 
 consuming compared to other methods but, on the other hand, produce 
 priorities in ratio scale.
 
-Prioritization can be used not just to decide which factors to address,
-but also to determine the order in which they need to be handled. In market-driven 
-software development a small part of a very large number of requirements
-need to be selected and divided into several releases to maximize return
-on investment. While in bespoke requirements, focusing on early delivery
-of value can help reduce the risk of project cancellation.
-
+%Prioritization can be used not just to decide which factors to address,
+%but also to determine the relative order of importance. In market-driven 
+%software development a small part of a very large number of requirements
+%need to be selected and divided into several releases to maximize return
+%on investment. While in bespoke requirements, focusing on early delivery
+%of value can help reduce the risk of project cancellation.
+%
 Ratio scale priorities have several advantages over ordinal scale
 priorities. Ratio scale shows not just the order of items but also
 relative distance between them. This enables the priority of a group of
 items to be calculated by summing up the priorities of individual items
-\citep{Berander2006a}. It is possible to say that one item or set
+\cite{Berander2006a}. It is possible to say that one item or set
 of items has higher priority than another set of items. Supposing stakeholders
 have to choose between several low priority items and one item with
 higher priority; with ordinal scale, the item with highest priority will
 always be selected first. However, if priorities are given on a ratio
 scale, it is possible that lower priority items will be selected if
-their cumulative priority is higher. Knowing the relative importance of
-sets of prioritization items helps in software release planning. Ratio
-scale allows the combining of multiple priority factors by calculating ratios
+their cumulative priority is higher. 
+
+Finally, the ratio scale allows the combining of multiple priority factors by calculating ratios
 between them. One example of this is the cost-value ratio that shows which
-requirements give more value for less money \citep{Karlsson1997}.
+requirements give more value for less money \cite{Karlsson1997}.
 
 \subsection{Prioritization Result Analysis}
 
-Different studies use and analyze CV in different ways. Disagreement
-between stakeholders happens when two or more stakeholders have assigned
+%Different studies use and analyze CV in different ways. 
+Disagreement between stakeholders happens when two or more stakeholders have assigned
 a different priority to one prioritization item. If the level of disagreement
 is high it may indicate potential conflicts between stakeholders.
 Such conflicts may be of technical character, as well as social or cultural.
@@ -51,9 +51,9 @@ In the end, stakeholder satisfaction is important because it is necessary to ach
 stakeholder commitment.
 
 In some cases a part of stakeholders may form a group of some kind and, therefore, prioritize
-requirements similarly.It may be useful
+requirements similarly. It may be useful
 to detect whether a group of stakeholders has different preferences
-than all other stakeholders. As an example, in \citep{Pettersson2008} domain experts,
+compared to other stakeholders. As an example, in \cite{Pettersson2008}, domain experts,
 technical experts, managers, project managers, testers, and developers
 use CV to prioritize software process improvement issues and the CV results
 are analysed using disagreement charts and satisfaction charts.
@@ -63,23 +63,27 @@ groups of stakeholders.
 The same items can be prioritized by the same stakeholders multiple times
 from different perspectives. In this case it is useful to determine correlation between
 the priorities in different perspectives to assess the differences
-between the perspectives. As an example, in \citep{Barney2009b} CV is used by developers,
-testers, and managers to prioritize quality attributes. The same quality
+between the perspectives. As an example, in \cite{Barney2009b}, CV is used by developers,
+testers and managers to prioritize quality attributes. The same quality
 attributes are prioritized from two perspectives: the perceived situation
 today and the perceived ideal situation. Correlation between the two perspectives
 is evaluated using the Spearman rank correlation matrix. This allows an analysis of
 how well the company balances the priorities of software quality attributes.
 
-In \citep{Jonsson2005} change impact issues are prioritized by developers,
+In \cite{Jonsson2005} change impact issues are prioritized by developers,
 testers, managers, and system architects. The prioritization is done
 with respect to three perspectives: strategic, tactical, and operative.
 In order to determine correlation between the perspectives, CV results are
-analysed using the Kruskal-Wallis test. In \citep{Chatzipetrou2010} the
-results of \citep{Jonsson2005} are further analysed using PCA, bi-plot, and
+analyzed using the Kruskal-Wallis test. In \cite{Chatzipetrou2010} the
+results of \cite{Jonsson2005} are further analyzed using PCA, bi-plot, and
 ternary plot. In this case, PCA is used to find correlated issues, 
 bi-plot shows variance, correlation, difference between
 the priorities of issues, and the viewpoints of stakeholders, while ternary
 plots are used to show the relative number of issues that received high,
 medium, and low priority.
 
-As can be seen above, from the examples given, prioritization has been performed with various stakeholders, using different perspectives and, in the end, also analysed using various techniques. We will next describe in more detail one of the more common methods to manage prioritization issues --- cumulative voting --- which has been used in software engineering for some time, but has its roots in corporate governance and biology.
+As can be seen above, from the examples above, prioritization has been performed 
+with various stakeholders, using different perspectives and, in the end, also analyzed using 
+various techniques. We will next describe in more detail one of the more common methods to 
+manage prioritization issues---cumulative voting---which has been used in software engineering 
+for some time. (CV has its roots in corporate governance and biology.)

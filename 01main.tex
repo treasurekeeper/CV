@@ -22,8 +22,10 @@
 %% $Id: elsarticle-template-1a-num.tex 151 2009-10-08 05:18:25Z rishi $
 %% $URL: http://lenova.river-valley.com/svn/elsbst/trunk/elsarticle-template-1a-num.tex $
 %%
-\documentclass[preprint,11pt]{elsarticle}
+\documentclass[preprint,12pt]{elsarticle}
 
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
 
@@ -41,11 +43,13 @@
 %% \usepackage{graphics}
 %% or use the graphicx package for more complicated commands
 \usepackage{graphicx}
+\usepackage{multicol}
 %% or use the epsfig package if you prefer to use the old commands
 %% \usepackage{epsfig}
 
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
+\usepackage{enumerate}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -75,9 +79,6 @@
 
 % \biboptions{}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-
 %%\usepackage[pdftex]{graphicx}
 
 \usepackage{array}
@@ -96,7 +97,7 @@
 
 \begin{document}
 
-\input{03frontmatter}
+\input{03newfrontmatter}
 
 %%
 %% Start line numbering here if you want
@@ -119,7 +120,7 @@
 %% Usage of \cite is as follows:
 %%   \cite{key}          ==>>  [#]
 %%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
-%%   \citet{key}         ==>>  Author [#]
+%%   \cite{key}         ==>>  Author [#]
 
 %% References with bibTeX database:
 

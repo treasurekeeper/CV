@@ -2,7 +2,7 @@
 \subsection{\label{coda}Compositional Data Analysis}
 CV results can be seen as a special type of data, i.e.\ compositional data.
 Compositional data does not contain absolute values. It shows only
-the relative weight of a component in a whole. In \citep{Chatzipetrou2010} the authors
+the relative weight of a component compared to the whole. In \cite{Chatzipetrou2010} the authors
 propose the use of compositional data analysis for the statistical analysis of CV. 
 
 A compositional data item is a vector ($x$) of positive components with a constant sum $k$:
@@ -59,7 +59,7 @@ is defined by:
 
 where $Y$ is the product of lineal combination and $a_{i}$ is any
 real number. Now, since the sum of priorities assigned in CV must add up
-to 100 (or any other constant number) at least one linear combination
+to 100, or any other constant number, at least one linear combination
 of $X$ is not normally distributed because it always adds up to
 100:
 
@@ -67,7 +67,7 @@ of $X$ is not normally distributed because it always adds up to
 	Y=1\cdot X_{1}+1\cdot X_{2}+\ldots+1\cdot X_{n}=100.
 \end{equation}
 
-In our opinion, the above indicates, quite strongly, that CV results do not follow a multivariate normal distribution and, hence, it follows that they should be analysed using non-parametric statistical tests \citep{Pawlowsky-Glahn2006}.
+In our opinion, the above indicates, quite strongly, that CV results do not follow a multivariate normal distribution and, hence, it follows that they should be analyzed using non-parametric statistical tests \cite{Pawlowsky-Glahn2006}.
 
 \subsubsection{\label{Problem-of-Zeroes}Problem of Zeroes}
 Compositional data analysis requires that log-ratios between any components in a vector can be
@@ -80,15 +80,15 @@ Essential zeroes mean that a data component
 is not present. Rounded zeroes mean that the component is present but
 its value is very low. We, as others have before us, conjecture that zeroes in CV results are 
 rounded because the priority of an item is a completely abstract notion
-and the instrument for measuring priority is human judgement \citep{Chatzipetrou2010}.
+and the instrument for measuring priority is human judgement \cite{Chatzipetrou2010}.
 
 Before compositional data analysis can be applied to CV results, we should first remove
 zeroes in the data. One approach can be to forbid stakeholders
-to assign zero priorities. This approach is used in e.g.\ \citep{Pettersson2008}.
+to assign zero priorities. This approach is used in e.g.\ \cite{Pettersson2008}.
 But this can add some unnecessary complexity to the prioritization
 process and, explicitly, delimits an expert's freedom. 
-In \citep{Chatzipetrou2010} the authors propose the use of a multiplicative 
-replacement strategy (as defined in \citep{Martin-Fernandez2003}) for CV result analysis.
+In \cite{Chatzipetrou2010} the authors propose the use of a multiplicative 
+replacement strategy (as defined in \cite{Martin-Fernandez2003}) for CV result analysis.
 
 This method replaces rounded zeroes with small values using the expression
 \begin{equation}
@@ -106,12 +106,12 @@ values (and the value of the imputed $\delta_{j}$ is arbitrary).
 \subsubsection{\label{Isometric-Logratio-Transformation}Isometric log-ratio transformation}
 In order to apply standard statistical methods to compositional data it should be transformed to remove the inherent correlation of the values.
 Compositional data analysis proposes special transformations that change the compositional data values to unconstrained real values.
-One such transformation is isometric log-ratio ($ilr$) transformation (as proposed by \citep{Pawlowsky-Glahn2006,Filzmoser2007a}):
+One such transformation is isometric log-ratio ($ilr$) transformation (as proposed by \cite{Pawlowsky-Glahn2006,Filzmoser2007a}).
 
-\begin{eqnarray}
-z & = & \left(z_{1},\,\ldots,\, z_{D-1}\right),\nonumber \\
-z_{i} & = & \sqrt{\frac{i}{i+1}}log\frac{\sqrt[i]{\prod_{j=1}^{i}x_{j}}}{x_{i+1}}for\, i=1,\ldots,D-1,\label{eq:ilr}
-\end{eqnarray}
+%\begin{eqnarray}
+%z & = & \left(z_{1},\,\ldots,\, z_{D-1}\right),\nonumber \\
+%z_{i} & = & \sqrt{\frac{i}{i+1}}log\frac{\sqrt[i]{\prod_{j=1}^{i}x_{j}}}{x_{i+1}}for\, i=1,\ldots,D-1,\label{eq:ilr}
+%\end{eqnarray}
 
 where $x$ is the vector that is being transformed and $z$ is the vector that is created. It should be noted that $z$ is shorter than $x$ by one element.
 
