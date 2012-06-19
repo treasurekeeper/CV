@@ -40,6 +40,8 @@ with low priority items its priority will be higher.
 % section about all the limitations, errors
 When doing analysis of compositional data one must take into account that compositional data special type of data
 and should be analysed differently than ordinary data.
+
+When doing analysis of compositional data one must take into account that compositional is a special type of data and should be analysed differently than other data types.
 %Compositional data analysis has, however, serious limitations.
 Ordinary unconstrained variables are free to take any positive or negative values,
 whereas, compositional data values can only be positive and have a constrained maximum value.
@@ -113,6 +115,6 @@ One such transformation is isometric log-ratio ($ilr$) transformation (as propos
 %z_{i} & = & \sqrt{\frac{i}{i+1}}log\frac{\sqrt[i]{\prod_{j=1}^{i}x_{j}}}{x_{i+1}}for\, i=1,\ldots,D-1,\label{eq:ilr}
 %\end{eqnarray}
 
-where $x$ is the vector that is being transformed and $z$ is the vector that is created. It should be noted that $z$ is shorter than $x$ by one element.
+%where $x$ is the vector that is being transformed and $z$ is the vector that is created. It should be noted that $z$ is shorter than $x$ by one element.
 
 After compositional data vectors are transformed using zero replacement and $ilr$, any standard statistical tests can be applied.
