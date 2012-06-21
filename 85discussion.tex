@@ -108,23 +108,23 @@ CV results used in the evaluation of ECV were tested for normality.
 The tests indicated that CV results do not have multivariate normal distribution.
 Therefore, the design of ECV was based on a non-parametric statistical test.
 
-\subsection{Future Research}
-There are very few studies that apply CV on prioritization sets of more than 30 items.
+\subsection{Future Work}
+With respect to future work one can distiguish two interesting paths: Scalability and improvements to ECV.
+
+First, there are very few studies that apply CV on prioritization sets of more than 30 items.
 However, in requirements engineering, industry practitioners need to prioritize much larger numbers of software requirements.
 Therefore, the state of art could benefit from the application of CV and HCV to large prioritization sets.
 
-The proposed method, ECV, has now been evaluated on existing research data. To further evaluate the ECV, it could be applied in direct industry practice and in prioritization cases with a larger number of prioritization items.
+The proposed method, ECV, has now been evaluated on existing research data. To further evaluate ECV, it would be appropriate to apply it in direct industry practice and in prioritization cases with a larger number of prioritization items ($>$30).
 Additionally, compositional data analysis methods, as the ones identified by this paper, should be tried with other prioritization methods that produce ratio scale results.
 
-% new
-ECV may be improved to find groups of equal items not just pairs.
-Equality of a pair (or a group) of items to another item can be tested with the help of compositional  balances.
+Second, ECV may be improved to find groups of equal items not just pairs.
+Equality of a pair (or a group) of items to another item can be tested with the help of compositional balances.
 
-CV process can be improved with the help of compositional data analysis.
-Weighting of stakeholder priorities could be done using compositional powering better than using a multiplication that will be removed in a log-ratio.
+The CV process itself can also be improved with the help of compositional data analysis.
+Weighting of stakeholder priorities could be done using compositional powering, which could be presumed as better compared to using a multiplication that is removed in a log-ratio tranformation.
 
-Compensation of priority values in HCV is not \emph{soubcompositionally coherent}. Sequential binary partition can be used to improve the compensation.
-% new
+Additionally, compensation of priority values in HCV is not \emph{subcompositionally coherent}; thus, sequential binary partition could quite possibly be used to improve the compensation.
 
 \subsection{Conclusions}
 CV prioritization results are special type of data -- compositional data.
