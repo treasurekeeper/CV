@@ -82,7 +82,12 @@ To determine the probability of $\bar{x}$ being between $a$ and $b$ the followin
 	p=P(b)-P(a)\label{eq:mean-between-a-b},
 \end{equation}
 
-where $P$ is the cumulative distribution function obtained by applying kernel density estimation on $ilr$-transformed priority values denoted by vector $C$. Variable $a$ is equal to $ilr(3,4)$ and $b$ is equal to $ilr(4,3)$. (A graphical interpretation of Equation~(\ref{eq:mean-between-a-b}) is presented in Figure~\ref{fig:Probability-p-that}.)
+where $P$ is the cumulative distribution function obtained by applying 
+kernel density estimation on the balances of priority values $b_i(k,l)$ in the vector B.
+The values a, b are a=sqrt(1/2) log(3/4) and b=sqrt(1/2) log(4/3).
+(A graphical interpretation of Equation~(\ref{eq:mean-between-a-b}) is presented in Figure~\ref{fig:Probability-p-that}.)
+
+
 The area that is denoted by letter $p$ represents the probability computed by the equation.
 
 \begin{figure}
